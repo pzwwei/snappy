@@ -57,11 +57,11 @@ You obtain the attributes from a view using `snp_*` properties provided by Snapp
 Every attribute on the right-hand side of the equation can be replaced by a literal of a supported type, so you can write things like:
 
 ```swift
-view.snp_width ~== 100
+view.snp_centerX ~== 100
 
 // instead of
 
-view.snp_top ~== superview.snp_width
+view.snp_centerX ~== superview.snp_left ~+ 100
 ```
 
 The behavior of how the literal types are converted to a constraint expression are described by the attribute themselves. This allows you to create constraints in a way not possible using the foundation API:
