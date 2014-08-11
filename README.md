@@ -44,7 +44,7 @@ Operator | Function
 
 ### Syntax
 
-Snappy has a fairly similar syntax, that can be expressed like so:
+Snappy has a fairly simple syntax, that can be expressed like so:
 
 ```none
 attribute ~==|~>=|~<= attribute|literal (~+|~- constant) (~*|*/ multiplier) (~! priority)
