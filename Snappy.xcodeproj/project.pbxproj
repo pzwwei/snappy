@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A029F101999296F0071B7BB /* SNPView+Snappy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A029F0F1999296F0071B7BB /* SNPView+Snappy.swift */; };
+		3A029F1419992B720071B7BB /* SNPInsetsAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A029F1319992B720071B7BB /* SNPInsetsAttribute.swift */; };
+		3A13ECDF1998F829002E2BFD /* SNPEdgeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13ECDE1998F829002E2BFD /* SNPEdgeAttribute.swift */; };
+		3A13ECE11998F843002E2BFD /* SNPPositionAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13ECE01998F843002E2BFD /* SNPPositionAttribute.swift */; };
+		3A49F03019981FC100D06A7F /* SNPAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F02F19981FC100D06A7F /* SNPAttribute.swift */; };
+		3A49F0361998214D00D06A7F /* SNPExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F0351998214D00D06A7F /* SNPExpression.swift */; };
+		3A49F0391998237000D06A7F /* SNPConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F0381998237000D06A7F /* SNPConstraint.swift */; };
+		3A49F03E1998290700D06A7F /* SNPOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F03D1998290700D06A7F /* SNPOperators.swift */; };
+		3A49F04019982E3400D06A7F /* SNPView+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F03F19982E3400D06A7F /* SNPView+Attributes.swift */; };
+		3A49F04319982F9200D06A7F /* SNPDoubleAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F04219982F9200D06A7F /* SNPDoubleAttribute.swift */; };
+		3A90A5AB1996ADBF0090D467 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A5AA1996ADBF0090D467 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A029F0F1999296F0071B7BB /* SNPView+Snappy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SNPView+Snappy.swift"; sourceTree = "<group>"; };
+		3A029F1319992B720071B7BB /* SNPInsetsAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPInsetsAttribute.swift; sourceTree = "<group>"; };
+		3A13ECDE1998F829002E2BFD /* SNPEdgeAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPEdgeAttribute.swift; sourceTree = "<group>"; };
+		3A13ECE01998F843002E2BFD /* SNPPositionAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPPositionAttribute.swift; sourceTree = "<group>"; };
+		3A49F02F19981FC100D06A7F /* SNPAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPAttribute.swift; sourceTree = "<group>"; };
+		3A49F0351998214D00D06A7F /* SNPExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPExpression.swift; sourceTree = "<group>"; };
+		3A49F0381998237000D06A7F /* SNPConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPConstraint.swift; sourceTree = "<group>"; };
+		3A49F03D1998290700D06A7F /* SNPOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPOperators.swift; sourceTree = "<group>"; };
+		3A49F03F19982E3400D06A7F /* SNPView+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SNPView+Attributes.swift"; sourceTree = "<group>"; };
+		3A49F04219982F9200D06A7F /* SNPDoubleAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPDoubleAttribute.swift; sourceTree = "<group>"; };
+		3A90A55A19969D390090D467 /* Snappy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snappy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A90A57519969D8C0090D467 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		3A90A57719969D8C0090D467 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		3A90A57819969D8C0090D467 /* Profile.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
+		3A90A57919969D8C0090D467 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		3A90A57A19969D8C0090D467 /* Test.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
+		3A90A57C19969D8C0090D467 /* Application.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
+		3A90A57D19969D8C0090D467 /* Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Framework.xcconfig; sourceTree = "<group>"; };
+		3A90A57E19969D8C0090D467 /* StaticLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = StaticLibrary.xcconfig; sourceTree = "<group>"; };
+		3A90A58019969D8C0090D467 /* iOS-Application.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
+		3A90A58119969D8C0090D467 /* iOS-Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
+		3A90A58219969D8C0090D467 /* iOS-Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-Framework.xcconfig"; sourceTree = "<group>"; };
+		3A90A58319969D8C0090D467 /* iOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		3A90A58519969D8C0090D467 /* Mac-Application.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-Application.xcconfig"; sourceTree = "<group>"; };
+		3A90A58619969D8C0090D467 /* Mac-Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-Base.xcconfig"; sourceTree = "<group>"; };
+		3A90A58719969D8C0090D467 /* Mac-DynamicLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-DynamicLibrary.xcconfig"; sourceTree = "<group>"; };
+		3A90A58819969D8C0090D467 /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
+		3A90A58919969D8C0090D467 /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		3A90A58A19969D8C0090D467 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3A90A59E19969E940090D467 /* Framework-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
+		3A90A5AA1996ADBF0090D467 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A90A55619969D390090D467 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A90A5AB1996ADBF0090D467 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A029F11199929DC0071B7BB /* Convenience Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A49F03D1998290700D06A7F /* SNPOperators.swift */,
+				3A49F03F19982E3400D06A7F /* SNPView+Attributes.swift */,
+				3A029F0F1999296F0071B7BB /* SNPView+Snappy.swift */,
+			);
+			name = "Convenience Extensions";
+			sourceTree = "<group>";
+		};
+		3A029F1219992B560071B7BB /* Custom Attributes */ = {
+			isa = PBXGroup;
+			children = (
+				3A029F1319992B720071B7BB /* SNPInsetsAttribute.swift */,
+			);
+			name = "Custom Attributes";
+			sourceTree = "<group>";
+		};
+		3A13ECDA1998F7BC002E2BFD /* Base Structures */ = {
+			isa = PBXGroup;
+			children = (
+				3A49F02F19981FC100D06A7F /* SNPAttribute.swift */,
+				3A49F0381998237000D06A7F /* SNPConstraint.swift */,
+				3A49F0351998214D00D06A7F /* SNPExpression.swift */,
+			);
+			name = "Base Structures";
+			sourceTree = "<group>";
+		};
+		3A13ECDB1998F7C8002E2BFD /* Standard Attributes */ = {
+			isa = PBXGroup;
+			children = (
+				3A49F04219982F9200D06A7F /* SNPDoubleAttribute.swift */,
+				3A13ECDE1998F829002E2BFD /* SNPEdgeAttribute.swift */,
+				3A13ECE01998F843002E2BFD /* SNPPositionAttribute.swift */,
+			);
+			name = "Standard Attributes";
+			sourceTree = "<group>";
+		};
+		3A90A55019969D390090D467 = {
+			isa = PBXGroup;
+			children = (
+				3A90A5A019969EA50090D467 /* Framework Source */,
+				3A90A59D19969E940090D467 /* Supporting Files */,
+				3A90A57319969D8C0090D467 /* Configuration */,
+				3A90A5AC1996ADC10090D467 /* Frameworks */,
+				3A90A55B19969D390090D467 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A90A55B19969D390090D467 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A90A55A19969D390090D467 /* Snappy.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A90A57319969D8C0090D467 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				3A90A57419969D8C0090D467 /* Base */,
+				3A90A57F19969D8C0090D467 /* iOS */,
+				3A90A58419969D8C0090D467 /* Mac OS X */,
+				3A90A58A19969D8C0090D467 /* README.md */,
+			);
+			name = Configuration;
+			path = External/xcconfigs;
+			sourceTree = "<group>";
+		};
+		3A90A57419969D8C0090D467 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3A90A57519969D8C0090D467 /* Common.xcconfig */,
+				3A90A57619969D8C0090D467 /* Configurations */,
+				3A90A57B19969D8C0090D467 /* Targets */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3A90A57619969D8C0090D467 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				3A90A57719969D8C0090D467 /* Debug.xcconfig */,
+				3A90A57819969D8C0090D467 /* Profile.xcconfig */,
+				3A90A57919969D8C0090D467 /* Release.xcconfig */,
+				3A90A57A19969D8C0090D467 /* Test.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		3A90A57B19969D8C0090D467 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				3A90A57C19969D8C0090D467 /* Application.xcconfig */,
+				3A90A57D19969D8C0090D467 /* Framework.xcconfig */,
+				3A90A57E19969D8C0090D467 /* StaticLibrary.xcconfig */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		3A90A57F19969D8C0090D467 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3A90A58019969D8C0090D467 /* iOS-Application.xcconfig */,
+				3A90A58119969D8C0090D467 /* iOS-Base.xcconfig */,
+				3A90A58219969D8C0090D467 /* iOS-Framework.xcconfig */,
+				3A90A58319969D8C0090D467 /* iOS-StaticLibrary.xcconfig */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		3A90A58419969D8C0090D467 /* Mac OS X */ = {
+			isa = PBXGroup;
+			children = (
+				3A90A58519969D8C0090D467 /* Mac-Application.xcconfig */,
+				3A90A58619969D8C0090D467 /* Mac-Base.xcconfig */,
+				3A90A58719969D8C0090D467 /* Mac-DynamicLibrary.xcconfig */,
+				3A90A58819969D8C0090D467 /* Mac-Framework.xcconfig */,
+				3A90A58919969D8C0090D467 /* Mac-StaticLibrary.xcconfig */,
+			);
+			path = "Mac OS X";
+			sourceTree = "<group>";
+		};
+		3A90A59D19969E940090D467 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A90A59E19969E940090D467 /* Framework-Info.plist */,
+			);
+			name = "Supporting Files";
+			path = Support;
+			sourceTree = "<group>";
+		};
+		3A90A5A019969EA50090D467 /* Framework Source */ = {
+			isa = PBXGroup;
+			children = (
+				3A13ECDA1998F7BC002E2BFD /* Base Structures */,
+				3A13ECDB1998F7C8002E2BFD /* Standard Attributes */,
+				3A029F1219992B560071B7BB /* Custom Attributes */,
+				3A029F11199929DC0071B7BB /* Convenience Extensions */,
+			);
+			name = "Framework Source";
+			path = Source;
+			sourceTree = "<group>";
+		};
+		3A90A5AC1996ADC10090D467 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A90A5AA1996ADBF0090D467 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3A90A55719969D390090D467 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3A90A55919969D390090D467 /* Snappy (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A90A56D19969D390090D467 /* Build configuration list for PBXNativeTarget "Snappy (iOS)" */;
+			buildPhases = (
+				3A90A5AD1996AECB0090D467 /* Increment Build Number */,
+				3A90A55519969D390090D467 /* Sources */,
+				3A90A55619969D390090D467 /* Frameworks */,
+				3A90A55719969D390090D467 /* Headers */,
+				3A90A55819969D390090D467 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Snappy (iOS)";
+			productName = Snappy;
+			productReference = 3A90A55A19969D390090D467 /* Snappy.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A90A55119969D390090D467 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SNP;
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Adrian Kashivskyy";
+				TargetAttributes = {
+					3A90A55919969D390090D467 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = 3A90A55419969D390090D467 /* Build configuration list for PBXProject "Snappy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3A90A55019969D390090D467;
+			productRefGroup = 3A90A55B19969D390090D467 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A90A55919969D390090D467 /* Snappy (iOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A90A55819969D390090D467 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A90A5AD1996AECB0090D467 /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbundleShortVersionString=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$INFOPLIST_FILE\")\n[[ $bundleShortVersionString =~ ([0-9]*)(.([0-9]*))?(.([0-9]*))? ]]\nbundleVersion=$(( $bundleVersion + ${BASH_REMATCH[1]} * 10000 ))\nbundleVersion=$(( $bundleVersion + $(( ${BASH_REMATCH[3]} * 100 )) ))\nbundleVersion=$(( $bundleVersion + $(( ${BASH_REMATCH[5]} )) ))\nbundleVersionString=$(printf \"%d\" $bundleVersion)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bundleVersionString\" \"$INFOPLIST_FILE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A90A55519969D390090D467 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A13ECE11998F843002E2BFD /* SNPPositionAttribute.swift in Sources */,
+				3A49F03019981FC100D06A7F /* SNPAttribute.swift in Sources */,
+				3A029F1419992B720071B7BB /* SNPInsetsAttribute.swift in Sources */,
+				3A49F03E1998290700D06A7F /* SNPOperators.swift in Sources */,
+				3A13ECDF1998F829002E2BFD /* SNPEdgeAttribute.swift in Sources */,
+				3A49F0361998214D00D06A7F /* SNPExpression.swift in Sources */,
+				3A029F101999296F0071B7BB /* SNPView+Snappy.swift in Sources */,
+				3A49F04019982E3400D06A7F /* SNPView+Attributes.swift in Sources */,
+				3A49F0391998237000D06A7F /* SNPConstraint.swift in Sources */,
+				3A49F04319982F9200D06A7F /* SNPDoubleAttribute.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3A90A56B19969D390090D467 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A90A57719969D8C0090D467 /* Debug.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_SWIFT_FLAGS = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A90A56C19969D390090D467 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A90A57919969D8C0090D467 /* Release.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_SWIFT_FLAGS = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3A90A56E19969D390090D467 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A90A58219969D8C0090D467 /* iOS-Framework.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0;
+				INFOPLIST_FILE = "Support/Framework-Info.plist";
+				PRODUCT_NAME = Snappy;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A90A56F19969D390090D467 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A90A58219969D8C0090D467 /* iOS-Framework.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0;
+				INFOPLIST_FILE = "Support/Framework-Info.plist";
+				PRODUCT_NAME = Snappy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A90A55419969D390090D467 /* Build configuration list for PBXProject "Snappy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A90A56B19969D390090D467 /* Debug */,
+				3A90A56C19969D390090D467 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A90A56D19969D390090D467 /* Build configuration list for PBXNativeTarget "Snappy (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A90A56E19969D390090D467 /* Debug */,
+				3A90A56F19969D390090D467 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A90A55119969D390090D467 /* Project object */;
+}
