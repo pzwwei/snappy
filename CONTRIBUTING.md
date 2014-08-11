@@ -8,6 +8,8 @@ Here are a couple of guidelines to make the process as painless as possible and 
 
 If you know exactly how to implement the feature being suggested or fix the bug being reported, please open a pull request instead of an issue. Pull requests are easier than patches or inline code blocks for discussing and merging the changes.
 
+Also, as specified by the [git-flow](http://nvie.com/posts/a-successful-git-branching-model), all pull request must originate from the `develop` branch and target it instead of `master`.
+
 ### Do some research
 
 Be sure to check our documentation, [wiki](http://github.com/akashivskyy/snappy/wiki) and [past issues](http://github.com/akashivskyy/snappy/issues?q=is%3Aclosed) before opening any new issues.
