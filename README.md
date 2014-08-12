@@ -95,6 +95,18 @@ view.snp.width >= 40 // implicit priority of 1000 (required)
 view.snp.width <= 80 ~ 750 // explicit priority of 750 (high)
 ```
 
+### Referencing constraints
+
+As all assignment operators return an array of installed constraints, feel free to save them for a later usage:
+
+``swift
+let edgesConstraints = view.snp.edges == 20
+
+// later
+
+for c in edgesConstraints { c.uninstall() }
+```
+
 ### Behind the scenes
 
 What makes Snappy create is that you don't have to write the boilerplate code.
