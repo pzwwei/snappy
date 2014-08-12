@@ -15,7 +15,7 @@ import UIKit
 /// SNPDoubleAttributeType, such as: DOuble, Float, Int and CGFloat.
 public class SNPInsetsAttribute<T: SNPInsetsAttributeType>: SNPAttribute<T> {
     
-    // TODO: Remove this in the next beta, when 17960407 is fixed.
+    // FIXME: Remove this in the next beta, when 17960407 is fixed.
     public override init(view: UIView?, attribute: NSLayoutAttribute?) {
         super.init(view: view, attribute: attribute)
     }

@@ -17,7 +17,7 @@ import UIKit
 /// and attribute.
 public class SNPEdgeAttribute<T: SNPDoubleAttributeType>: SNPDoubleAttribute<T> {
     
-    // TODO: Remove this in the next beta, when 17960407 is fixed.
+    // FIXME: Remove this in the next beta, when 17960407 is fixed.
     public override init(view: UIView?, attribute: NSLayoutAttribute?) {
         super.init(view: view, attribute: attribute)
     }

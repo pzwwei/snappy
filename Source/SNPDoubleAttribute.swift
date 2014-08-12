@@ -15,13 +15,13 @@ import UIKit
 /// SNPDoubleAttributeType, such as: DOuble, Float, Int and CGFloat.
 public class SNPDoubleAttribute<T: SNPDoubleAttributeType>: SNPAttribute<T> {
     
-    // TODO: Remove this in the next beta, when 17960407 is fixed.
+    // FIXME: Remove this in the next beta, when 17960407 is fixed.
     public override init(view: UIView?, attribute: NSLayoutAttribute?) {
         super.init(view: view, attribute: attribute)
     }
     
     public override func createConstraints(#relation: NSLayoutRelation, expression: SNPExpression<T>) -> [SNPConstraint] {
-        // TODO: NSLayoutAttribute.NotAnAttribute -> .NotAnAttribute in the next beta.
+        // FIXME: NSLayoutAttribute.NotAnAttribute -> .NotAnAttribute in the next beta.
         let source: SNPAttribute<T> = expression.attribute ?? SNPAttribute<T>(view: nil, attribute: NSLayoutAttribute.NotAnAttribute)
         let positive: Bool = expression.constantIsPositive ?? true
         let modifier: Double = positive ? 1 : -1
