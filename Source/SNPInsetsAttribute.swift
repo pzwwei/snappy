@@ -82,47 +82,31 @@ extension CGFloat: SNPInsetsAttributeType {
 
 // /////////////////////////////////////////////////////////////////////////////
 
-public func ~==(lhs: SNPAttribute<UIEdgeInsets>, rhs: SNPInsetsAttributeType) -> [SNPConstraint] {
+public func ==(lhs: SNPAttribute<UIEdgeInsets>, rhs: SNPInsetsAttributeType) -> [SNPConstraint] {
     let expr = SNPExpression<UIEdgeInsets>()
     expr.constantValue = rhs.snp_insetsValue
-    return lhs ~== expr
+    return lhs == expr
 }
 
-public func ~>=(lhs: SNPAttribute<UIEdgeInsets>, rhs: SNPInsetsAttributeType) -> [SNPConstraint] {
+public func >=(lhs: SNPAttribute<UIEdgeInsets>, rhs: SNPInsetsAttributeType) -> [SNPConstraint] {
     let expr = SNPExpression<UIEdgeInsets>()
     expr.constantValue = rhs.snp_insetsValue
-    return lhs ~>= expr
+    return lhs >= expr
 }
 
-public func ~<=(lhs: SNPAttribute<UIEdgeInsets>, rhs: SNPInsetsAttributeType) -> [SNPConstraint] {
+public func <=(lhs: SNPAttribute<UIEdgeInsets>, rhs: SNPInsetsAttributeType) -> [SNPConstraint] {
     let expr = SNPExpression<UIEdgeInsets>()
     expr.constantValue = rhs.snp_insetsValue
-    return lhs ~<= expr
+    return lhs <= expr
 }
 
-public func ~+(lhs: SNPAttribute<UIEdgeInsets>, rhs: SNPInsetsAttributeType) -> SNPExpression<UIEdgeInsets> {
-    let expr = SNPExpression<UIEdgeInsets>()
-    expr.attribute = lhs
-    expr.constantIsPositive = true
-    expr.constantValue = rhs.snp_insetsValue
-    return expr
-}
-
-public func ~+(lhs: SNPExpression<UIEdgeInsets>, rhs: SNPInsetsAttributeType) -> SNPExpression<UIEdgeInsets> {
+public func +(lhs: SNPExpression<UIEdgeInsets>, rhs: SNPInsetsAttributeType) -> SNPExpression<UIEdgeInsets> {
     lhs.constantIsPositive = true
     lhs.constantValue = rhs.snp_insetsValue
     return lhs
 }
 
-public func ~-(lhs: SNPAttribute<UIEdgeInsets>, rhs: SNPInsetsAttributeType) -> SNPExpression<UIEdgeInsets> {
-    let expr = SNPExpression<UIEdgeInsets>()
-    expr.attribute = lhs
-    expr.constantIsPositive = false
-    expr.constantValue = rhs.snp_insetsValue
-    return expr
-}
-
-public func ~-(lhs: SNPExpression<UIEdgeInsets>, rhs: SNPInsetsAttributeType) -> SNPExpression<UIEdgeInsets> {
+public func -(lhs: SNPExpression<UIEdgeInsets>, rhs: SNPInsetsAttributeType) -> SNPExpression<UIEdgeInsets> {
     lhs.constantIsPositive = false
     lhs.constantValue = rhs.snp_insetsValue
     return lhs

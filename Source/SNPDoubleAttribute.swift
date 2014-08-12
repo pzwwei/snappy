@@ -67,47 +67,31 @@ extension CGFloat: SNPDoubleAttributeType {
 
 // /////////////////////////////////////////////////////////////////////////////
 
-public func ~==(lhs: SNPAttribute<Double>, rhs: SNPDoubleAttributeType) -> [SNPConstraint] {
+public func ==(lhs: SNPAttribute<Double>, rhs: SNPDoubleAttributeType) -> [SNPConstraint] {
     let expr = SNPExpression<Double>()
     expr.constantValue = rhs.snp_doubleValue
-    return lhs ~== expr
+    return lhs == expr
 }
 
-public func ~>=(lhs: SNPAttribute<Double>, rhs: SNPDoubleAttributeType) -> [SNPConstraint] {
+public func >=(lhs: SNPAttribute<Double>, rhs: SNPDoubleAttributeType) -> [SNPConstraint] {
     let expr = SNPExpression<Double>()
     expr.constantValue = rhs.snp_doubleValue
-    return lhs ~>= expr
+    return lhs >= expr
 }
 
-public func ~<=(lhs: SNPAttribute<Double>, rhs: SNPDoubleAttributeType) -> [SNPConstraint] {
+public func <=(lhs: SNPAttribute<Double>, rhs: SNPDoubleAttributeType) -> [SNPConstraint] {
     let expr = SNPExpression<Double>()
     expr.constantValue = rhs.snp_doubleValue
-    return lhs ~<= expr
+    return lhs <= expr
 }
 
-public func ~+(lhs: SNPAttribute<Double>, rhs: SNPDoubleAttributeType) -> SNPExpression<Double> {
-    let expr = SNPExpression<Double>()
-    expr.attribute = lhs
-    expr.constantIsPositive = true
-    expr.constantValue = rhs.snp_doubleValue
-    return expr
-}
-
-public func ~+(lhs: SNPExpression<Double>, rhs: SNPDoubleAttributeType) -> SNPExpression<Double> {
+public func +(lhs: SNPExpression<Double>, rhs: SNPDoubleAttributeType) -> SNPExpression<Double> {
     lhs.constantIsPositive = true
     lhs.constantValue = rhs.snp_doubleValue
     return lhs
 }
 
-public func ~-(lhs: SNPAttribute<Double>, rhs: SNPDoubleAttributeType) -> SNPExpression<Double> {
-    let expr = SNPExpression<Double>()
-    expr.attribute = lhs
-    expr.constantIsPositive = false
-    expr.constantValue = rhs.snp_doubleValue
-    return expr
-}
-
-public func ~-(lhs: SNPExpression<Double>, rhs: SNPDoubleAttributeType) -> SNPExpression<Double> {
+public func -(lhs: SNPExpression<Double>, rhs: SNPDoubleAttributeType) -> SNPExpression<Double> {
     lhs.constantIsPositive = false
     lhs.constantValue = rhs.snp_doubleValue
     return lhs

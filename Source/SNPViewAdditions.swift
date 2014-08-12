@@ -1,5 +1,5 @@
 //
-//  SNPView+Snappy.swift
+//  SNPViewExtensions.swift
 //
 //  Copyright (c) 2014 Adrian Kashivskyy. All rights reserved.
 //
