@@ -8,8 +8,8 @@
 
 import UIKit
 
-/// Build number of the Snappy framework.
-public let SNPSnappyVersionString = "0.2.0"
+/// Version string of the Snappy framework.
+public let SNPSnappyVersionString: String = "0.2.0"
 
-/// Version string of the Snappy gramework.
-public let SNPSnappyVersionNumber = 200
+/// Build number of the Snappy framework.
+public let SNPSnappyVersionNumber: Int = 200
