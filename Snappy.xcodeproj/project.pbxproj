@@ -12,6 +12,7 @@
 		3A13ECDF1998F829002E2BFD /* SNPEdgeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13ECDE1998F829002E2BFD /* SNPEdgeAttribute.swift */; };
 		3A13ECE11998F843002E2BFD /* SNPPositionAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13ECE01998F843002E2BFD /* SNPPositionAttribute.swift */; };
 		3A23078E199A035D00C57727 /* SNPViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A23078D199A035D00C57727 /* SNPViewProxy.swift */; };
+		3A230790199A1B8A00C57727 /* SNPVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A23078F199A1B8A00C57727 /* SNPVersion.swift */; };
 		3A49F03019981FC100D06A7F /* SNPAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F02F19981FC100D06A7F /* SNPAttribute.swift */; };
 		3A49F0361998214D00D06A7F /* SNPExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F0351998214D00D06A7F /* SNPExpression.swift */; };
 		3A49F0391998237000D06A7F /* SNPConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F0381998237000D06A7F /* SNPConstraint.swift */; };
@@ -26,6 +27,7 @@
 		3A13ECDE1998F829002E2BFD /* SNPEdgeAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPEdgeAttribute.swift; sourceTree = "<group>"; };
 		3A13ECE01998F843002E2BFD /* SNPPositionAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPPositionAttribute.swift; sourceTree = "<group>"; };
 		3A23078D199A035D00C57727 /* SNPViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPViewProxy.swift; sourceTree = "<group>"; };
+		3A23078F199A1B8A00C57727 /* SNPVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPVersion.swift; sourceTree = "<group>"; };
 		3A49F02F19981FC100D06A7F /* SNPAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPAttribute.swift; sourceTree = "<group>"; };
 		3A49F0351998214D00D06A7F /* SNPExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPExpression.swift; sourceTree = "<group>"; };
 		3A49F0381998237000D06A7F /* SNPConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPConstraint.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				3A49F03D1998290700D06A7F /* SNPOperators.swift */,
+				3A23078F199A1B8A00C57727 /* SNPVersion.swift */,
 			);
 			name = "Language Support";
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				3A029F101999296F0071B7BB /* SNPViewAdditions.swift in Sources */,
 				3A49F0391998237000D06A7F /* SNPConstraint.swift in Sources */,
 				3A49F04319982F9200D06A7F /* SNPDoubleAttribute.swift in Sources */,
+				3A230790199A1B8A00C57727 /* SNPVersion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
