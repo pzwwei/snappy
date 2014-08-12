@@ -32,7 +32,7 @@ As there's no support for redistributable Swift frameworks (yet), you can clone 
 They're everywhere. You create your constraint using a combination of 7 operators provided by Snappy:
 
 Operator | Function
-------- :|:--------
+--------:|:--------
     `==` | Creates an "equal" constraint.
     `>=` | Creates a "greater than or equal" constraint.
     `<=` | Creates a "less than or equal" constraint.
