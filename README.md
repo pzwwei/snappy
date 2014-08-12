@@ -99,7 +99,7 @@ view.snp.width <= 80 ~ 750 // explicit priority of 750 (high)
 
 As all assignment operators return an array of installed constraints, feel free to save them for a later usage:
 
-``swift
+```swift
 let edgesConstraints = view.snp.edges == 20
 
 // later
