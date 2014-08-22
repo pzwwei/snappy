@@ -102,7 +102,7 @@ public func +<T>(lhs: SNPAttribute<T>, rhs: T) -> SNPExpression<T> {
 }
 
 public func -<T>(lhs: SNPExpression<T>, rhs: T) -> SNPExpression<T> {
-    lhs.constantIsPositive = true
+    lhs.constantIsPositive = false
     lhs.constantValue = rhs
     return lhs
 }
@@ -110,7 +110,7 @@ public func -<T>(lhs: SNPExpression<T>, rhs: T) -> SNPExpression<T> {
 public func -<T>(lhs: SNPAttribute<T>, rhs: T) -> SNPExpression<T> {
     let expr = SNPExpression<T>()
     expr.attribute = lhs
-    return expr + rhs
+    return expr - rhs
 }
 
 // /////////////////////////////////////////////////////////////////////////////
