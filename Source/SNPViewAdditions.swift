@@ -44,27 +44,27 @@ public extension UIView {
     ///
     /// :param: upTo The maximal superview from which to remove constraints.
     public func snp_removeAllConstraints(#upTo: UIView) {
-        var view: UIView = self.superview!
-        while view != nil && !view.isDescendantOfView(upTo) {
-            for constraint in view.constraints() as [NSLayoutConstraint] {
+        var view: UIView? = self.superview
+        while view != nil && !view!.isDescendantOfView(upTo) {
+            for constraint in view!.constraints() as [NSLayoutConstraint] {
                 if constraint.firstItem as? UIView == self {
-                    view.removeConstraint(constraint)
+                    view!.removeConstraint(constraint)
                 }
             }
-            view = view.superview!
+            view = view!.superview?
         }
     }
     
     /// Removes all constraints associated with the receiver.
     public func snp_removeAllConstraints() {
-        var view: UIView = self.superview!
+        var view: UIView? = self.superview?
         while view != nil {
-            for constraint in view.constraints() as [NSLayoutConstraint] {
+            for constraint in view!.constraints() as [NSLayoutConstraint] {
                 if constraint.firstItem as? UIView == self {
-                    view.removeConstraint(constraint)
+                    view!.removeConstraint(constraint)
                 }
             }
-            view = view.superview!
+            view = view!.superview?
         }
     }
     
