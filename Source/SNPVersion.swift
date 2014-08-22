@@ -9,7 +9,7 @@
 import UIKit
 
 /// Version string of the Snappy framework.
-public let SNPSnappyVersionString: String = "0.2.0"
+public let SNPSnappyVersionString: String = "0.2.1"
 
 /// Build number of the Snappy framework.
-public let SNPSnappyVersionNumber: Int = 200
+public let SNPSnappyVersionNumber: Int = 201
