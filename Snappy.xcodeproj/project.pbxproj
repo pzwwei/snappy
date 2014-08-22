@@ -13,13 +13,97 @@
 		3A13ECE11998F843002E2BFD /* SNPPositionAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13ECE01998F843002E2BFD /* SNPPositionAttribute.swift */; };
 		3A23078E199A035D00C57727 /* SNPViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A23078D199A035D00C57727 /* SNPViewProxy.swift */; };
 		3A230790199A1B8A00C57727 /* SNPVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A23078F199A1B8A00C57727 /* SNPVersion.swift */; };
+		3A40DD8719A7B80500B4C01A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A23079A199A735900C57727 /* Quick.framework */; };
+		3A40DD8819A7B81300B4C01A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2307A9199A736200C57727 /* Nimble.framework */; };
+		3A40DD9419A7B8B000B4C01A /* Snappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A55A19969D390090D467 /* Snappy.framework */; };
 		3A49F03019981FC100D06A7F /* SNPAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F02F19981FC100D06A7F /* SNPAttribute.swift */; };
 		3A49F0361998214D00D06A7F /* SNPExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F0351998214D00D06A7F /* SNPExpression.swift */; };
 		3A49F0391998237000D06A7F /* SNPConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F0381998237000D06A7F /* SNPConstraint.swift */; };
 		3A49F03E1998290700D06A7F /* SNPOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F03D1998290700D06A7F /* SNPOperators.swift */; };
 		3A49F04319982F9200D06A7F /* SNPDoubleAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F04219982F9200D06A7F /* SNPDoubleAttribute.swift */; };
+		3A5BEDAE19A7C04100695BC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A5AA1996ADBF0090D467 /* UIKit.framework */; };
 		3A90A5AB1996ADBF0090D467 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A5AA1996ADBF0090D467 /* UIKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A230799199A735900C57727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A230791199A735900C57727 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DAEB6B8E1943873100289F44;
+			remoteInfo = Quick;
+		};
+		3A23079B199A735900C57727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A230791199A735900C57727 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DAEB6B991943873100289F44;
+			remoteInfo = QuickTests;
+		};
+		3A23079D199A735900C57727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A230791199A735900C57727 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A5D117C19473F2100F6D13D;
+			remoteInfo = "Quick-iOS";
+		};
+		3A23079F199A735900C57727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A230791199A735900C57727 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A5D118619473F2100F6D13D;
+			remoteInfo = "Quick-iOSTests";
+		};
+		3A2307A8199A736200C57727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A2307A1199A736200C57727 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F1A74291940169200FFFC47;
+			remoteInfo = "Nimble-iOS";
+		};
+		3A2307AA199A736200C57727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A2307A1199A736200C57727 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F1A74341940169200FFFC47;
+			remoteInfo = "Nimble-iOSTests";
+		};
+		3A2307AC199A736200C57727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A2307A1199A736200C57727 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F925EAD195C0D6300ED456B;
+			remoteInfo = "Nimble-OSX";
+		};
+		3A2307AE199A736200C57727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A2307A1199A736200C57727 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F925EB7195C0D6300ED456B;
+			remoteInfo = "Nimble-OSXTests";
+		};
+		3A40DD8919A7B81C00B4C01A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A230791199A735900C57727 /* Quick.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A5D117B19473F2100F6D13D;
+			remoteInfo = "Quick-iOS";
+		};
+		3A40DD8B19A7B81F00B4C01A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A2307A1199A736200C57727 /* Nimble.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F1A74281940169200FFFC47;
+			remoteInfo = "Nimble-iOS";
+		};
+		3A40DD9119A7B88D00B4C01A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A90A55119969D390090D467 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A90A55919969D390090D467;
+			remoteInfo = "Snappy (iOS)";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3A029F0F1999296F0071B7BB /* SNPViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPViewAdditions.swift; sourceTree = "<group>"; };
@@ -28,6 +112,10 @@
 		3A13ECE01998F843002E2BFD /* SNPPositionAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPPositionAttribute.swift; sourceTree = "<group>"; };
 		3A23078D199A035D00C57727 /* SNPViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPViewProxy.swift; sourceTree = "<group>"; };
 		3A23078F199A1B8A00C57727 /* SNPVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPVersion.swift; sourceTree = "<group>"; };
+		3A230791199A735900C57727 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = External/Quick/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
+		3A2307A1199A736200C57727 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = External/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
+		3A2307C4199A74C500C57727 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		3A40DD7B19A7B69100B4C01A /* Snappy Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snappy Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A49F02F19981FC100D06A7F /* SNPAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPAttribute.swift; sourceTree = "<group>"; };
 		3A49F0351998214D00D06A7F /* SNPExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPExpression.swift; sourceTree = "<group>"; };
 		3A49F0381998237000D06A7F /* SNPConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPConstraint.swift; sourceTree = "<group>"; };
@@ -57,6 +145,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3A40DD7819A7B69100B4C01A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A5BEDAE19A7C04100695BC3 /* UIKit.framework in Frameworks */,
+				3A40DD9419A7B8B000B4C01A /* Snappy.framework in Frameworks */,
+				3A40DD8719A7B80500B4C01A /* Quick.framework in Frameworks */,
+				3A40DD8819A7B81300B4C01A /* Nimble.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A90A55619969D390090D467 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -114,10 +213,41 @@
 			name = "View Extensions";
 			sourceTree = "<group>";
 		};
+		3A230792199A735900C57727 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A23079A199A735900C57727 /* Quick.framework */,
+				3A23079C199A735900C57727 /* QuickTests.xctest */,
+				3A23079E199A735900C57727 /* Quick.framework */,
+				3A2307A0199A735900C57727 /* Quick-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A2307A2199A736200C57727 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A2307A9199A736200C57727 /* Nimble.framework */,
+				3A2307AB199A736200C57727 /* NimbleTests.xctest */,
+				3A2307AD199A736200C57727 /* Nimble.framework */,
+				3A2307AF199A736200C57727 /* Nimble-OSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A2307C3199A741F00C57727 /* Test Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Test Cases";
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		3A90A55019969D390090D467 = {
 			isa = PBXGroup;
 			children = (
 				3A90A5A019969EA50090D467 /* Framework Source */,
+				3A2307C3199A741F00C57727 /* Test Cases */,
 				3A90A59D19969E940090D467 /* Supporting Files */,
 				3A90A57319969D8C0090D467 /* Configuration */,
 				3A90A5AC1996ADC10090D467 /* Frameworks */,
@@ -129,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				3A90A55A19969D390090D467 /* Snappy.framework */,
+				3A40DD7B19A7B69100B4C01A /* Snappy Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				3A90A59E19969E940090D467 /* Framework-Info.plist */,
+				3A2307C4199A74C500C57727 /* Tests-Info.plist */,
 			);
 			name = "Supporting Files";
 			path = Support;
@@ -224,6 +356,8 @@
 		3A90A5AC1996ADC10090D467 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A230791199A735900C57727 /* Quick.xcodeproj */,
+				3A2307A1199A736200C57727 /* Nimble.xcodeproj */,
 				3A90A5AA1996ADBF0090D467 /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -242,6 +376,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3A40DD7A19A7B69100B4C01A /* Snappy Tests (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A40DD8119A7B69200B4C01A /* Build configuration list for PBXNativeTarget "Snappy Tests (iOS)" */;
+			buildPhases = (
+				3A40DD7719A7B69100B4C01A /* Sources */,
+				3A40DD7819A7B69100B4C01A /* Frameworks */,
+				3A40DD7919A7B69100B4C01A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A40DD9219A7B88D00B4C01A /* PBXTargetDependency */,
+				3A40DD8C19A7B81F00B4C01A /* PBXTargetDependency */,
+				3A40DD8A19A7B81C00B4C01A /* PBXTargetDependency */,
+			);
+			name = "Snappy Tests (iOS)";
+			productName = "Snappy Tests";
+			productReference = 3A40DD7B19A7B69100B4C01A /* Snappy Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3A90A55919969D390090D467 /* Snappy (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A90A56D19969D390090D467 /* Build configuration list for PBXNativeTarget "Snappy (iOS)" */;
@@ -271,6 +425,9 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Adrian Kashivskyy";
 				TargetAttributes = {
+					3A40DD7A19A7B69100B4C01A = {
+						CreatedOnToolsVersion = 6.0;
+					};
 					3A90A55919969D390090D467 = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -286,14 +443,91 @@
 			mainGroup = 3A90A55019969D390090D467;
 			productRefGroup = 3A90A55B19969D390090D467 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3A2307A2199A736200C57727 /* Products */;
+					ProjectRef = 3A2307A1199A736200C57727 /* Nimble.xcodeproj */;
+				},
+				{
+					ProductGroup = 3A230792199A735900C57727 /* Products */;
+					ProjectRef = 3A230791199A735900C57727 /* Quick.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3A90A55919969D390090D467 /* Snappy (iOS) */,
+				3A40DD7A19A7B69100B4C01A /* Snappy Tests (iOS) */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		3A23079A199A735900C57727 /* Quick.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Quick.framework;
+			remoteRef = 3A230799199A735900C57727 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A23079C199A735900C57727 /* QuickTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QuickTests.xctest;
+			remoteRef = 3A23079B199A735900C57727 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A23079E199A735900C57727 /* Quick.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Quick.framework;
+			remoteRef = 3A23079D199A735900C57727 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A2307A0199A735900C57727 /* Quick-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Quick-iOSTests.xctest";
+			remoteRef = 3A23079F199A735900C57727 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A2307A9199A736200C57727 /* Nimble.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nimble.framework;
+			remoteRef = 3A2307A8199A736200C57727 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A2307AB199A736200C57727 /* NimbleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NimbleTests.xctest;
+			remoteRef = 3A2307AA199A736200C57727 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A2307AD199A736200C57727 /* Nimble.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nimble.framework;
+			remoteRef = 3A2307AC199A736200C57727 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A2307AF199A736200C57727 /* Nimble-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nimble-OSXTests.xctest";
+			remoteRef = 3A2307AE199A736200C57727 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
+		3A40DD7919A7B69100B4C01A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A90A55819969D390090D467 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,6 +555,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3A40DD7719A7B69100B4C01A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A90A55519969D390090D467 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,14 +582,54 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3A40DD8A19A7B81C00B4C01A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Quick-iOS";
+			targetProxy = 3A40DD8919A7B81C00B4C01A /* PBXContainerItemProxy */;
+		};
+		3A40DD8C19A7B81F00B4C01A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Nimble-iOS";
+			targetProxy = 3A40DD8B19A7B81F00B4C01A /* PBXContainerItemProxy */;
+		};
+		3A40DD9219A7B88D00B4C01A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A90A55919969D390090D467 /* Snappy (iOS) */;
+			targetProxy = 3A40DD9119A7B88D00B4C01A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		3A40DD8219A7B69200B4C01A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A90A58019969D8C0090D467 /* iOS-Application.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Support/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "Snappy Tests";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A40DD8319A7B69200B4C01A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A90A58019969D8C0090D467 /* iOS-Application.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Support/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "Snappy Tests";
+			};
+			name = Release;
+		};
 		3A90A56B19969D390090D467 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A90A57719969D8C0090D467 /* Debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -361,7 +642,6 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -372,11 +652,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A90A58219969D8C0090D467 /* iOS-Framework.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 0;
 				INFOPLIST_FILE = "Support/Framework-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = Snappy;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -386,11 +666,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A90A58219969D8C0090D467 /* iOS-Framework.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 0;
 				INFOPLIST_FILE = "Support/Framework-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = Snappy;
 			};
 			name = Release;
@@ -398,6 +678,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3A40DD8119A7B69200B4C01A /* Build configuration list for PBXNativeTarget "Snappy Tests (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A40DD8219A7B69200B4C01A /* Debug */,
+				3A40DD8319A7B69200B4C01A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3A90A55419969D390090D467 /* Build configuration list for PBXProject "Snappy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

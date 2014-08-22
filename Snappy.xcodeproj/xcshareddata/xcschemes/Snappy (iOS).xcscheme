@@ -28,7 +28,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3A40DD7A19A7B69100B4C01A"
+               BuildableName = "Snappy Tests.xctest"
+               BlueprintName = "Snappy Tests (iOS)"
+               ReferencedContainer = "container:Snappy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3A90A55919969D390090D467"
+            BuildableName = "Snappy.framework"
+            BlueprintName = "Snappy (iOS)"
+            ReferencedContainer = "container:Snappy.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = ""
