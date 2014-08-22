@@ -17,7 +17,7 @@ Snappy is a simple, yet powerful and extensible auto-layout library, written in 
 
 ## Requirements
 
-Snappy requires **iOS 8** and an emerald application being developed in **Xcode 6.0 Beta 5**. OS X support is coming.
+Snappy requires **iOS 8** and an emerald application being developed in **Xcode 6.0 Beta 6**. OS X support is coming.
 
 ## Installation
 
