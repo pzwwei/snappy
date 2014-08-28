@@ -16,7 +16,6 @@
 		3A40DD8719A7B80500B4C01A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A23079A199A735900C57727 /* Quick.framework */; };
 		3A40DD8819A7B81300B4C01A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2307A9199A736200C57727 /* Nimble.framework */; };
 		3A40DD9419A7B8B000B4C01A /* Snappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A55A19969D390090D467 /* Snappy.framework */; };
-		3A49F03019981FC100D06A7F /* SNPAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F02F19981FC100D06A7F /* SNPAttribute.swift */; };
 		3A49F0361998214D00D06A7F /* SNPExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F0351998214D00D06A7F /* SNPExpression.swift */; };
 		3A49F0391998237000D06A7F /* SNPConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F0381998237000D06A7F /* SNPConstraint.swift */; };
 		3A49F03E1998290700D06A7F /* SNPOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F03D1998290700D06A7F /* SNPOperators.swift */; };
@@ -119,7 +118,6 @@
 		3A2307A1199A736200C57727 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = External/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
 		3A2307C4199A74C500C57727 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		3A40DD7B19A7B69100B4C01A /* Snappy Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snappy Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A49F02F19981FC100D06A7F /* SNPAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPAttribute.swift; sourceTree = "<group>"; };
 		3A49F0351998214D00D06A7F /* SNPExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPExpression.swift; sourceTree = "<group>"; };
 		3A49F0381998237000D06A7F /* SNPConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPConstraint.swift; sourceTree = "<group>"; };
 		3A49F03D1998290700D06A7F /* SNPOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPOperators.swift; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 		3A13ECDA1998F7BC002E2BFD /* Base Structures */ = {
 			isa = PBXGroup;
 			children = (
-				3A49F02F19981FC100D06A7F /* SNPAttribute.swift */,
 				3A49F0381998237000D06A7F /* SNPConstraint.swift */,
 				3A49F0351998214D00D06A7F /* SNPExpression.swift */,
 			);
@@ -253,8 +250,8 @@
 		3A4B1D9E19AF99DB0054843A /* Base Data Types */ = {
 			isa = PBXGroup;
 			children = (
-				3A4B1DA519AF99E80054843A /* SNPConstraintProducer.swift */,
 				3A4B1DA719AF9B360054843A /* SNPAttributeType.swift */,
+				3A4B1DA519AF99E80054843A /* SNPConstraintProducer.swift */,
 			);
 			name = "Base Data Types";
 			sourceTree = "<group>";
@@ -587,7 +584,6 @@
 				3A4B1DA619AF99E80054843A /* SNPConstraintProducer.swift in Sources */,
 				3A23078E199A035D00C57727 /* SNPViewProxy.swift in Sources */,
 				3A13ECE11998F843002E2BFD /* SNPPositionAttribute.swift in Sources */,
-				3A49F03019981FC100D06A7F /* SNPAttribute.swift in Sources */,
 				3A4B1DA819AF9B360054843A /* SNPAttributeType.swift in Sources */,
 				3A029F1419992B720071B7BB /* SNPInsetsAttribute.swift in Sources */,
 				3A49F03E1998290700D06A7F /* SNPOperators.swift in Sources */,

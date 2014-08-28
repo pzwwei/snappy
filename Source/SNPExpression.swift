@@ -14,10 +14,10 @@ import UIKit
 ///
 /// SNPExpression is a generic class, where T is the type of the constant value
 /// the expression holds.
-public class SNPExpression<T> {
+public final class SNPExpression<T> {
     
     /// The source attribute in the expression.
-    public var attribute: SNPAttribute<T>?
+    public var attribute: SNPAttributeType?
     
     /// A boolean indicating whether a constant is positive or negative. This
     /// property can be used to determine required calculations when creating
