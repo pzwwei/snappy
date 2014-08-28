@@ -12,7 +12,6 @@
 		3A13ECDF1998F829002E2BFD /* SNPEdgeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13ECDE1998F829002E2BFD /* SNPEdgeAttribute.swift */; };
 		3A13ECE11998F843002E2BFD /* SNPPositionAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13ECE01998F843002E2BFD /* SNPPositionAttribute.swift */; };
 		3A23078E199A035D00C57727 /* SNPViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A23078D199A035D00C57727 /* SNPViewProxy.swift */; };
-		3A230790199A1B8A00C57727 /* SNPVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A23078F199A1B8A00C57727 /* SNPVersion.swift */; };
 		3A40DD8719A7B80500B4C01A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A23079A199A735900C57727 /* Quick.framework */; };
 		3A40DD8819A7B81300B4C01A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2307A9199A736200C57727 /* Nimble.framework */; };
 		3A40DD9419A7B8B000B4C01A /* Snappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A55A19969D390090D467 /* Snappy.framework */; };
@@ -112,7 +111,6 @@
 		3A13ECDE1998F829002E2BFD /* SNPEdgeAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPEdgeAttribute.swift; sourceTree = "<group>"; };
 		3A13ECE01998F843002E2BFD /* SNPPositionAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPPositionAttribute.swift; sourceTree = "<group>"; };
 		3A23078D199A035D00C57727 /* SNPViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPViewProxy.swift; sourceTree = "<group>"; };
-		3A23078F199A1B8A00C57727 /* SNPVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPVersion.swift; sourceTree = "<group>"; };
 		3A230791199A735900C57727 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = External/Quick/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
 		3A2307A1199A736200C57727 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = External/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
 		3A2307C4199A74C500C57727 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				3A49F03D1998290700D06A7F /* SNPOperators.swift */,
-				3A23078F199A1B8A00C57727 /* SNPVersion.swift */,
 			);
 			name = "Language Support";
 			sourceTree = "<group>";
@@ -580,7 +577,6 @@
 				3A029F101999296F0071B7BB /* SNPViewAdditions.swift in Sources */,
 				3A49F0391998237000D06A7F /* SNPConstraint.swift in Sources */,
 				3A49F04319982F9200D06A7F /* SNPDoubleAttribute.swift in Sources */,
-				3A230790199A1B8A00C57727 /* SNPVersion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
