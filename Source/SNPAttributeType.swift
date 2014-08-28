@@ -29,6 +29,6 @@ public protocol SNPAttributeType {
     /// :param: expression The expression to be used to construct a constraint.
     ///
     /// :returns: An array of installable layout constraints.
-    func produceConstraints(#relation: NSLayoutRelation, expression: SNPExpression<ConstantType>) -> [SNPConstraint]
+    func produceConstraints(#relation: NSLayoutRelation, expression: SNPExpression<Self>) -> [SNPConstraint]
     
 }
