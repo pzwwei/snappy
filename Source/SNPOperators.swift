@@ -3,10 +3,7 @@
 //
 //  Copyright (c) 2014 Adrian Kashivskyy. All rights reserved.
 //
-//  Licensed under the MIT License.
-//
-//  The basic operator syntax for Snappy looks like this:
-//  attr ==|>=|<= attr|literal [*|/ multiplier] [+|- constant] [~ priority]
+//  Licensed under the MIT License.=
 //
 
 import UIKit
