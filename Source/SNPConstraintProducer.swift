@@ -8,9 +8,8 @@
 
 import UIKit
 
-/// The SNPConstraintProducer provides a common interface for types capable of
-/// producing constraints. It is adopted by SNPAttributeType, but can be used
-/// as a stand-alone protocol.
+/// The SNPConstraintProducer protocol provides a common interface for types
+/// capable of producing constraints.
 public protocol SNPConstraintProducer {
     
     /// Produces the layout constraints using the given expression.
