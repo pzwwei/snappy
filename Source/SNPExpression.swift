@@ -8,34 +8,35 @@
 
 import UIKit
 
-/// SNPExpression class is used to describe the right-hand side of a constraint
-/// equation. It contains reference to the source attribute, constant and
-/// multiplication factors and the priority.
+/// The SNPExpression structure is used to describe the right-hand side of a
+/// constraint equation. It contains information about the source attribute,
+/// constant and multiplication factors, as well as constraint's priority.
 ///
-/// SNPExpression is a generic class, where T is the type of the constant value
-/// the expression holds.
-public final class SNPExpression <A: SNPAttributeType> {
+/// :param: A The type of layout attribute referenced in the expression.
+public struct SNPExpression <A: SNPAttributeType> {
     
-    /// The source attribute in the expression.
-    public var attribute: A?
+    /// The source attribute referenced in the expression.
+    public let attribute: A
     
-    /// A boolean indicating whether a constant is positive or negative. This
-    /// property can be used to determine required calculations when creating
-    /// custom layout attributes.
-    public var constantIsPositive: Bool?
-    
+    /// A boolean indicating whether a constant is positive or negative.
+    public var constantPositive: Bool?
+
     /// The constant factor in the expression.
     public var constantValue: A.ConstantType?
     
     /// The multiplication factor in the expression.
-    public var multiplier: Double = 1
+    public var multiplicationValue: Double = 1
     
     /// The priority of the constraint.
     public var priority: UILayoutPriority = 1000
     
     // /////////////////////////////////////////////////////////////////////////
     
-    /// Creates and returns an initialized expression.
-    public init() {}
+    /// Creates and initializes an expression.
+    ///
+    /// :param: attribute The source layout attribute.
+    init(attribute: A) {
+        self.attribute = attribute
+    }
     
 }
