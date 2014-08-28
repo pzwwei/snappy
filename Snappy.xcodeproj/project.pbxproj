@@ -22,6 +22,7 @@
 		3A49F03E1998290700D06A7F /* SNPOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F03D1998290700D06A7F /* SNPOperators.swift */; };
 		3A49F04319982F9200D06A7F /* SNPDoubleAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F04219982F9200D06A7F /* SNPDoubleAttribute.swift */; };
 		3A4B1DA619AF99E80054843A /* SNPConstraintProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B1DA519AF99E80054843A /* SNPConstraintProducer.swift */; };
+		3A4B1DA819AF9B360054843A /* SNPAttributeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B1DA719AF9B360054843A /* SNPAttributeType.swift */; };
 		3A5BEDAD19A7BC5500695BC3 /* SNPOperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BEDAC19A7BC5500695BC3 /* SNPOperatorsSpec.swift */; };
 		3A5BEDAE19A7C04100695BC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A5AA1996ADBF0090D467 /* UIKit.framework */; };
 		3A90A5AB1996ADBF0090D467 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A5AA1996ADBF0090D467 /* UIKit.framework */; };
@@ -124,6 +125,7 @@
 		3A49F03D1998290700D06A7F /* SNPOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPOperators.swift; sourceTree = "<group>"; };
 		3A49F04219982F9200D06A7F /* SNPDoubleAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPDoubleAttribute.swift; sourceTree = "<group>"; };
 		3A4B1DA519AF99E80054843A /* SNPConstraintProducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPConstraintProducer.swift; sourceTree = "<group>"; };
+		3A4B1DA719AF9B360054843A /* SNPAttributeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPAttributeType.swift; sourceTree = "<group>"; };
 		3A5BEDAC19A7BC5500695BC3 /* SNPOperatorsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPOperatorsSpec.swift; sourceTree = "<group>"; };
 		3A90A55A19969D390090D467 /* Snappy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snappy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A90A57519969D8C0090D467 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4B1DA519AF99E80054843A /* SNPConstraintProducer.swift */,
+				3A4B1DA719AF9B360054843A /* SNPAttributeType.swift */,
 			);
 			name = "Base Data Types";
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				3A23078E199A035D00C57727 /* SNPViewProxy.swift in Sources */,
 				3A13ECE11998F843002E2BFD /* SNPPositionAttribute.swift in Sources */,
 				3A49F03019981FC100D06A7F /* SNPAttribute.swift in Sources */,
+				3A4B1DA819AF9B360054843A /* SNPAttributeType.swift in Sources */,
 				3A029F1419992B720071B7BB /* SNPInsetsAttribute.swift in Sources */,
 				3A49F03E1998290700D06A7F /* SNPOperators.swift in Sources */,
 				3A13ECDF1998F829002E2BFD /* SNPEdgeAttribute.swift in Sources */,
