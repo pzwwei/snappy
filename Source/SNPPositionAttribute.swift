@@ -10,7 +10,7 @@
 /// attributes, such as x-center and y-center.
 public struct SNPPositionAttribute: SNPAttributeType, SNPConstraintProducing, SNPAnonymousConstraintProducing {
     
-    /// Creates and initializes an edge attribute.
+    /// Creates and returns an initialized position attribute.
     ///
     /// :param: view The associated view.
     /// :param: attribute The represented layout attribute.

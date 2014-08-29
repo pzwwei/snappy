@@ -30,7 +30,7 @@ public struct SNPExpression <A: SNPAttributeType> {
     
     // /////////////////////////////////////////////////////////////////////////
     
-    /// Creates and initializes an expression.
+    /// Creates and returns an initialized expression.
     ///
     /// :param: attribute The source layout attribute.
     init(attribute: A) {
@@ -55,7 +55,7 @@ public struct SNPAnonymousExpression <C> {
     
     // /////////////////////////////////////////////////////////////////////////
     
-    /// Creates and initializes an anonymous expression.
+    /// Creates and returns an initialized anonymous expression.
     ///
     /// :param: The constant factor in the expression.
     init(constantValue: C) {

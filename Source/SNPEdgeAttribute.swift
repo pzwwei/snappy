@@ -10,7 +10,7 @@
 /// such as top, bottom, left and right.
 public struct SNPEdgeAttribute: SNPAttributeType, SNPConstraintProducing, SNPAnonymousConstraintProducing {
     
-    /// Creates and initializes an edge attribute.
+    /// Creates and returns an initialized edge attribute.
     ///
     /// :param: view The associated view.
     /// :param: attribute The represented layout attribute.
