@@ -22,7 +22,7 @@ public struct SNPExpression <A: SNPAttributeType> {
     public var constantPositive: Bool?
 
     /// The constant factor in the expression.
-    public var constantValue: A.ConstantValueType?
+    public var constantValue: A.ConstantType?
     
     /// The multiplication factor in the expression.
     public var multiplicationValue: Double = 1

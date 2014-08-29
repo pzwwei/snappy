@@ -13,7 +13,7 @@ import UIKit
 public protocol SNPAttributeType {
     
     /// The supported type of a constant factor in the expression.
-    typealias ConstantValueType
+    typealias ConstantType
     
     /// A view associated with an attribute.
     var view: UIView { get }
@@ -29,7 +29,7 @@ public protocol SNPAttributeType {
 public protocol SNPConstraintProducing {
     
     /// The supported type of a constant factor in the expression.
-    typealias ConstantValueType
+    typealias ConstantType
     
     /// Produces the layout constraints using the given expression.
     ///
@@ -37,7 +37,7 @@ public protocol SNPConstraintProducing {
     /// :param: expression The expression to be used to construct a constraint.
     ///
     /// :returns: An array of installable layout constraints.
-    func produceConstraints <A where A.ConstantValueType == ConstantValueType> (#relation: NSLayoutRelation, expression: SNPExpression<A>)
+    func produceConstraints <A where A.ConstantType == ConstantType> (#relation: NSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint]
     
 }
 
@@ -46,7 +46,7 @@ public protocol SNPConstraintProducing {
 public protocol SNPAnonymousConstraintProducing {
     
     /// The supported type of a constant factor in the expression.
-    typealias ConstantValueType
+    typealias ConstantType
     
     /// Produces the layout constraints using the given anonymous expression.
     ///
@@ -54,6 +54,6 @@ public protocol SNPAnonymousConstraintProducing {
     /// :param: expression The expression to be used to construct a constraint.
     ///
     /// :returns: An array of installable layout constraints.
-    func produceConstraints(#relation: NSLayoutRelation, expression: SNPAnonymousExpression<ConstantValueType>)
+    func produceConstraints(#relation: NSLayoutRelation, expression: SNPAnonymousExpression<ConstantType>) -> [SNPConstraint]
     
 }
