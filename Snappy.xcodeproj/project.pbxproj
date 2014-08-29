@@ -7,22 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A029F101999296F0071B7BB /* SNPViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A029F0F1999296F0071B7BB /* SNPViewAdditions.swift */; };
-		3A029F1419992B720071B7BB /* SNPInsetsAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A029F1319992B720071B7BB /* SNPInsetsAttribute.swift */; };
-		3A13ECDF1998F829002E2BFD /* SNPEdgeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13ECDE1998F829002E2BFD /* SNPEdgeAttribute.swift */; };
-		3A13ECE11998F843002E2BFD /* SNPPositionAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13ECE01998F843002E2BFD /* SNPPositionAttribute.swift */; };
-		3A23078E199A035D00C57727 /* SNPViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A23078D199A035D00C57727 /* SNPViewProxy.swift */; };
 		3A40DD8719A7B80500B4C01A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A23079A199A735900C57727 /* Quick.framework */; };
 		3A40DD8819A7B81300B4C01A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2307A9199A736200C57727 /* Nimble.framework */; };
 		3A40DD9419A7B8B000B4C01A /* Snappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A55A19969D390090D467 /* Snappy.framework */; };
-		3A49F0361998214D00D06A7F /* SNPExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F0351998214D00D06A7F /* SNPExpression.swift */; };
-		3A49F0391998237000D06A7F /* SNPConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F0381998237000D06A7F /* SNPConstraint.swift */; };
-		3A49F03E1998290700D06A7F /* SNPOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F03D1998290700D06A7F /* SNPOperators.swift */; };
-		3A4B1DA819AF9B360054843A /* SNPAttributeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B1DA719AF9B360054843A /* SNPAttributeType.swift */; };
-		3A4B1DD619AFAB0E0054843A /* SNPDoubleAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F04219982F9200D06A7F /* SNPDoubleAttribute.swift */; };
-		3A5BEDAD19A7BC5500695BC3 /* SNPOperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BEDAC19A7BC5500695BC3 /* SNPOperatorsSpec.swift */; };
+		3A4B1E1719AFE8090054843A /* SNPExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B1E1619AFE8090054843A /* SNPExpression.swift */; };
+		3A4B1E1F19AFEFB50054843A /* SNPAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B1E1E19AFEFB50054843A /* SNPAttribute.swift */; };
+		3A4B1E2119AFF4780054843A /* SNPOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B1E2019AFF4780054843A /* SNPOperators.swift */; };
+		3A4B1E2319AFF62E0054843A /* SNPConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B1E2219AFF62E0054843A /* SNPConstraint.swift */; };
 		3A5BEDAE19A7C04100695BC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A5AA1996ADBF0090D467 /* UIKit.framework */; };
 		3A90A5AB1996ADBF0090D467 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A5AA1996ADBF0090D467 /* UIKit.framework */; };
+		3AFA045419B0A10E0079B0DB /* SNPEdgeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA045319B0A10E0079B0DB /* SNPEdgeAttribute.swift */; };
+		3AFA045619B0A5760079B0DB /* SNPPositionAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA045519B0A5760079B0DB /* SNPPositionAttribute.swift */; };
+		3AFA045A19B0AB670079B0DB /* SNPViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA045819B0AB670079B0DB /* SNPViewAdditions.swift */; };
+		3AFA045B19B0AB670079B0DB /* SNPViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA045919B0AB670079B0DB /* SNPViewProxy.swift */; };
+		3AFA045E19B0AB950079B0DB /* SNPOperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA045C19B0AB6F0079B0DB /* SNPOperatorsSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,21 +104,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A029F0F1999296F0071B7BB /* SNPViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPViewAdditions.swift; sourceTree = "<group>"; };
-		3A029F1319992B720071B7BB /* SNPInsetsAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPInsetsAttribute.swift; sourceTree = "<group>"; };
-		3A13ECDE1998F829002E2BFD /* SNPEdgeAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPEdgeAttribute.swift; sourceTree = "<group>"; };
-		3A13ECE01998F843002E2BFD /* SNPPositionAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPPositionAttribute.swift; sourceTree = "<group>"; };
-		3A23078D199A035D00C57727 /* SNPViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPViewProxy.swift; sourceTree = "<group>"; };
 		3A230791199A735900C57727 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = External/Quick/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
 		3A2307A1199A736200C57727 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = External/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
 		3A2307C4199A74C500C57727 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		3A40DD7B19A7B69100B4C01A /* Snappy Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snappy Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A49F0351998214D00D06A7F /* SNPExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPExpression.swift; sourceTree = "<group>"; };
-		3A49F0381998237000D06A7F /* SNPConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPConstraint.swift; sourceTree = "<group>"; };
-		3A49F03D1998290700D06A7F /* SNPOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPOperators.swift; sourceTree = "<group>"; };
-		3A49F04219982F9200D06A7F /* SNPDoubleAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPDoubleAttribute.swift; sourceTree = "<group>"; };
-		3A4B1DA719AF9B360054843A /* SNPAttributeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPAttributeType.swift; sourceTree = "<group>"; };
-		3A5BEDAC19A7BC5500695BC3 /* SNPOperatorsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPOperatorsSpec.swift; sourceTree = "<group>"; };
+		3A4B1E1619AFE8090054843A /* SNPExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPExpression.swift; sourceTree = "<group>"; };
+		3A4B1E1E19AFEFB50054843A /* SNPAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPAttribute.swift; sourceTree = "<group>"; };
+		3A4B1E2019AFF4780054843A /* SNPOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPOperators.swift; sourceTree = "<group>"; };
+		3A4B1E2219AFF62E0054843A /* SNPConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPConstraint.swift; sourceTree = "<group>"; };
 		3A90A55A19969D390090D467 /* Snappy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snappy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A90A57519969D8C0090D467 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		3A90A57719969D8C0090D467 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -142,6 +133,11 @@
 		3A90A58A19969D8C0090D467 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3A90A59E19969E940090D467 /* Framework-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
 		3A90A5AA1996ADBF0090D467 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3AFA045319B0A10E0079B0DB /* SNPEdgeAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPEdgeAttribute.swift; sourceTree = "<group>"; };
+		3AFA045519B0A5760079B0DB /* SNPPositionAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPPositionAttribute.swift; sourceTree = "<group>"; };
+		3AFA045819B0AB670079B0DB /* SNPViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPViewAdditions.swift; sourceTree = "<group>"; };
+		3AFA045919B0AB670079B0DB /* SNPViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPViewProxy.swift; sourceTree = "<group>"; };
+		3AFA045C19B0AB6F0079B0DB /* SNPOperatorsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPOperatorsSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,50 +163,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A029F11199929DC0071B7BB /* Language Support */ = {
-			isa = PBXGroup;
-			children = (
-				3A49F03D1998290700D06A7F /* SNPOperators.swift */,
-			);
-			name = "Language Support";
-			sourceTree = "<group>";
-		};
-		3A029F1219992B560071B7BB /* Custom Attributes */ = {
-			isa = PBXGroup;
-			children = (
-				3A029F1319992B720071B7BB /* SNPInsetsAttribute.swift */,
-			);
-			name = "Custom Attributes";
-			sourceTree = "<group>";
-		};
-		3A13ECDA1998F7BC002E2BFD /* Base Structures */ = {
-			isa = PBXGroup;
-			children = (
-				3A49F0381998237000D06A7F /* SNPConstraint.swift */,
-				3A49F0351998214D00D06A7F /* SNPExpression.swift */,
-			);
-			name = "Base Structures";
-			sourceTree = "<group>";
-		};
-		3A13ECDB1998F7C8002E2BFD /* Standard Attributes */ = {
-			isa = PBXGroup;
-			children = (
-				3A49F04219982F9200D06A7F /* SNPDoubleAttribute.swift */,
-				3A13ECDE1998F829002E2BFD /* SNPEdgeAttribute.swift */,
-				3A13ECE01998F843002E2BFD /* SNPPositionAttribute.swift */,
-			);
-			name = "Standard Attributes";
-			sourceTree = "<group>";
-		};
-		3A23078B199A034500C57727 /* View Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				3A029F0F1999296F0071B7BB /* SNPViewAdditions.swift */,
-				3A23078D199A035D00C57727 /* SNPViewProxy.swift */,
-			);
-			name = "View Extensions";
-			sourceTree = "<group>";
-		};
 		3A230792199A735900C57727 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,24 +188,34 @@
 		3A2307C3199A741F00C57727 /* Test Cases */ = {
 			isa = PBXGroup;
 			children = (
-				3A5BEDAC19A7BC5500695BC3 /* SNPOperatorsSpec.swift */,
+				3AFA045C19B0AB6F0079B0DB /* SNPOperatorsSpec.swift */,
 			);
 			name = "Test Cases";
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		3A4B1D9E19AF99DB0054843A /* Base Data Types */ = {
+		3A4B1E2419AFFCAD0054843A /* Core Types */ = {
 			isa = PBXGroup;
 			children = (
-				3A4B1DA719AF9B360054843A /* SNPAttributeType.swift */,
+				3A4B1E1E19AFEFB50054843A /* SNPAttribute.swift */,
+				3A4B1E1619AFE8090054843A /* SNPExpression.swift */,
+				3A4B1E2219AFF62E0054843A /* SNPConstraint.swift */,
 			);
-			name = "Base Data Types";
+			name = "Core Types";
+			sourceTree = "<group>";
+		};
+		3A4B1E2519AFFCBB0054843A /* Language Support */ = {
+			isa = PBXGroup;
+			children = (
+				3A4B1E2019AFF4780054843A /* SNPOperators.swift */,
+			);
+			name = "Language Support";
 			sourceTree = "<group>";
 		};
 		3A90A55019969D390090D467 = {
 			isa = PBXGroup;
 			children = (
-				3A90A5A019969EA50090D467 /* Framework Source */,
+				3A90A5A019969EA50090D467 /* Source Code */,
 				3A2307C3199A741F00C57727 /* Test Cases */,
 				3A90A59D19969E940090D467 /* Supporting Files */,
 				3A90A57319969D8C0090D467 /* Configuration */,
@@ -347,17 +309,15 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		3A90A5A019969EA50090D467 /* Framework Source */ = {
+		3A90A5A019969EA50090D467 /* Source Code */ = {
 			isa = PBXGroup;
 			children = (
-				3A4B1D9E19AF99DB0054843A /* Base Data Types */,
-				3A13ECDA1998F7BC002E2BFD /* Base Structures */,
-				3A13ECDB1998F7C8002E2BFD /* Standard Attributes */,
-				3A029F1219992B560071B7BB /* Custom Attributes */,
-				3A029F11199929DC0071B7BB /* Language Support */,
-				3A23078B199A034500C57727 /* View Extensions */,
+				3A4B1E2419AFFCAD0054843A /* Core Types */,
+				3AFA044C19B0A0F90079B0DB /* Attribute Types */,
+				3AFA045719B0AB460079B0DB /* View Extensions */,
+				3A4B1E2519AFFCBB0054843A /* Language Support */,
 			);
-			name = "Framework Source";
+			name = "Source Code";
 			path = Source;
 			sourceTree = "<group>";
 		};
@@ -369,6 +329,24 @@
 				3A90A5AA1996ADBF0090D467 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AFA044C19B0A0F90079B0DB /* Attribute Types */ = {
+			isa = PBXGroup;
+			children = (
+				3AFA045319B0A10E0079B0DB /* SNPEdgeAttribute.swift */,
+				3AFA045519B0A5760079B0DB /* SNPPositionAttribute.swift */,
+			);
+			name = "Attribute Types";
+			sourceTree = "<group>";
+		};
+		3AFA045719B0AB460079B0DB /* View Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3AFA045819B0AB670079B0DB /* SNPViewAdditions.swift */,
+				3AFA045919B0AB670079B0DB /* SNPViewProxy.swift */,
+			);
+			name = "View Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -567,7 +545,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A5BEDAD19A7BC5500695BC3 /* SNPOperatorsSpec.swift in Sources */,
+				3AFA045E19B0AB950079B0DB /* SNPOperatorsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,16 +553,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A23078E199A035D00C57727 /* SNPViewProxy.swift in Sources */,
-				3A13ECE11998F843002E2BFD /* SNPPositionAttribute.swift in Sources */,
-				3A4B1DA819AF9B360054843A /* SNPAttributeType.swift in Sources */,
-				3A4B1DD619AFAB0E0054843A /* SNPDoubleAttribute.swift in Sources */,
-				3A029F1419992B720071B7BB /* SNPInsetsAttribute.swift in Sources */,
-				3A49F03E1998290700D06A7F /* SNPOperators.swift in Sources */,
-				3A13ECDF1998F829002E2BFD /* SNPEdgeAttribute.swift in Sources */,
-				3A49F0361998214D00D06A7F /* SNPExpression.swift in Sources */,
-				3A029F101999296F0071B7BB /* SNPViewAdditions.swift in Sources */,
-				3A49F0391998237000D06A7F /* SNPConstraint.swift in Sources */,
+				3AFA045419B0A10E0079B0DB /* SNPEdgeAttribute.swift in Sources */,
+				3A4B1E2319AFF62E0054843A /* SNPConstraint.swift in Sources */,
+				3AFA045A19B0AB670079B0DB /* SNPViewAdditions.swift in Sources */,
+				3AFA045B19B0AB670079B0DB /* SNPViewProxy.swift in Sources */,
+				3A4B1E2119AFF4780054843A /* SNPOperators.swift in Sources */,
+				3AFA045619B0A5760079B0DB /* SNPPositionAttribute.swift in Sources */,
+				3A4B1E1F19AFEFB50054843A /* SNPAttribute.swift in Sources */,
+				3A4B1E1719AFE8090054843A /* SNPExpression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
