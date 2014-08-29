@@ -8,43 +8,65 @@
 
 import UIKit
 
-/// SNPPositionAttribute is a standard attribute which is used to describe
-/// "position" layout attributes, i.e. x-center and y-center.
-///
-/// SNPPositionAttribute also provides a way not to explicitly specify a source
-/// attribute in the expression. If it encounters an expression without a
-/// source, it automatically creates one, based on the destination's superview
-/// and attribute, which for x-center would be left and right for y-center.
-public class SNPPositionAttribute<T: SNPDoubleAttributeType>: SNPEdgeAttribute<T> {
+/// The SNPPositionAttribute structure is used to describe "position" layout
+/// attributes, such as x-center and y-center.
+public struct SNPPositionAttribute: SNPAttributeType, SNPConstraintProducing, SNPAnonymousConstraintProducing {
     
-    // FIXME: Remove this in the next beta, when 17960407 is fixed.
-    public override init(view: UIView?, attribute: NSLayoutAttribute?) {
-        super.init(view: view, attribute: attribute)
+    /// Creates and initializes an edge attribute.
+    ///
+    /// :param: view The associated view.
+    /// :param: attribute The represented layout attribute.
+    init(view: UIView, attribute: NSLayoutAttribute) {
+        self.view = view
+        self.attribute = attribute
     }
     
-    public override func createConstraints(#relation: NSLayoutRelation, expression: SNPExpression<T>) -> [SNPConstraint] {
-        if let attribute = self.attribute? {
-            func attributeValid(attr: NSLayoutAttribute) -> Bool {
-                switch attr {
-                    case .CenterX, .CenterY: return true
-                    default: return false
-                }
-            }
-            func fallbackAttribute(attr: NSLayoutAttribute) -> NSLayoutAttribute {
-                switch attr {
-                    case .CenterX: return .Left
-                    case .CenterY: return .Top
-                    default: return .NotAnAttribute
-                }
-            }
-            if attributeValid(attribute) {
-                let fallback = fallbackAttribute(attribute)
-                let attribute = expression.attribute ?? SNPEdgeAttribute<T>(view: self.view!.superview, attribute: fallback)
-                expression.attribute = attribute
-            }
-        }
-        return super.createConstraints(relation: relation, expression: expression)
+    // /////////////////////////////////////////////////////////////////////////
+    
+    /// An array of supported attributes.
+    private static var supportedAttributes: [NSLayoutAttribute] {
+        return [.CenterX, .CenterY]
+    }
+    
+    // /////////////////////////////////////////////////////////////////////////
+    
+    /// See SNPAttributeType.
+    public typealias ConstantType = Double
+    
+    /// See SNPAttributeType.
+    public let view: UIView
+    
+    /// See SNPAttributeType.
+    public let attribute: NSLayoutAttribute
+    
+    // /////////////////////////////////////////////////////////////////////////
+    
+    /// See SNPConstraintProducing.
+    public func produceConstraints <A where A.ConstantType == ConstantType> (#relation: NSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint] {
+        assert(contains(self.dynamicType.supportedAttributes, self.attribute), "Cannot produce constraints: unsupported destination layout attribute.")
+        assert(contains(self.dynamicType.supportedAttributes, expression.attribute.attribute), "Cannot produce constraints: unsupported source layout attribute.")
+        return [SNPConstraint(
+            destination: (self.view, self.attribute),
+            source: (expression.attribute.view, expression.attribute.attribute),
+            relation: relation,
+            constant: (expression.constantValue ?? 0) * ((expression.constantPositive ?? true) ? 1 : -1),
+            multiplier: expression.multiplicationValue,
+            priority: expression.priority
+        )]
+    }
+    
+    /// See SNPAnonymousConstraintProducing.
+    public func produceConstraints(#relation: NSLayoutRelation, expression: SNPAnonymousExpression<ConstantType>) -> [SNPConstraint] {
+        assert(contains(self.dynamicType.supportedAttributes, self.attribute), "Cannot produce constraints: unsupported destination layout attribute.")
+        assert(self.view.superview != nil, "Cannot produce constraints: destination view has no superview.")
+        return [SNPConstraint(
+            destination: (self.view, self.attribute),
+            source: (self.view.superview!, ((self.attribute == .CenterX) ? .Left : .Top)),
+            relation: relation,
+            constant: expression.constantValue,
+            multiplier: 1,
+            priority: expression.priority
+        )]
     }
     
 }
-
