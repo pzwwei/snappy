@@ -30,7 +30,7 @@ public struct SNPEdgeAttribute: SNPAttributeType, SNPConstraintProducing, SNPAno
     
     // /////////////////////////////////////////////////////////////////////////
     
-    /// See SNPAttributeType
+    /// See SNPAttributeType.
     public typealias ConstantType = Double
     
     /// See SNPAttributeType.
@@ -41,6 +41,7 @@ public struct SNPEdgeAttribute: SNPAttributeType, SNPConstraintProducing, SNPAno
 
     // /////////////////////////////////////////////////////////////////////////
 
+    /// See SNPConstraintProducing.
     public func produceConstraints <A where A.ConstantType == ConstantType> (#relation: NSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint] {
         assert(contains(self.dynamicType.supportedAttributes, self.attribute), "Cannot produce constraints: unsupported destination layout attribute.")
         assert(contains(self.dynamicType.supportedAttributes, expression.attribute.attribute), "Cannot produce constraints: unsupported source layout attribute.")
@@ -54,6 +55,7 @@ public struct SNPEdgeAttribute: SNPAttributeType, SNPConstraintProducing, SNPAno
         )]
     }
     
+    /// See SNPAnonymousConstraintProducing.
     public func produceConstraints(#relation: NSLayoutRelation, expression: SNPAnonymousExpression<ConstantType>) -> [SNPConstraint] {
         assert(contains(self.dynamicType.supportedAttributes, self.attribute), "Cannot produce constraints: unsupported destination layout attribute.")
         assert(self.view.superview != nil, "Cannot produce constraints: destination view has no superview.")
