@@ -8,46 +8,52 @@
 
 import UIKit
 
-/// SNPAttribute class is used to describe a layout attribute along with its
-/// attached view.
-///
-/// However, the SNPAttribute class is an abstract class and should not be
-/// initialized itself, because it cannot know how to produce real layout
-/// constraints. Instead, you should subclass it and explicitly override the
-/// method which is responsible for layout constraints creation.
-public class SNPAttribute<T> {
+/// The SNPAttributeType protocol provides a common interface for types that
+/// represent a layout attribute of a view.
+public protocol SNPAttributeType {
     
-    /// A view associated with the attribute, can be nil only if the attribute
-    /// is on the right-hand side of the constraint equation.
-    public let view: UIView? = nil
+    /// The supported type of a constant factor in the expression.
+    typealias ConstantType
     
-    /// A foundation layout attribute, can be nil, but something must be used
-    /// at the time of layout constraint creation.
-    public let attribute: NSLayoutAttribute? = nil
+    /// A view associated with an attribute.
+    var view: UIView { get }
     
-    // /////////////////////////////////////////////////////////////////////////
+    /// A foundation layout attribute. This property can be nil only when using
+    /// with custom attributes, otherwise a fatal error may occur.
+    var attribute: NSLayoutAttribute { get }
     
-    /// Creates and initializes a layout attribute.
-    ///
-    /// :param: view The associated view of a constraint.
-    /// :param: attribute The layout attribute being described.
-    public init(view: UIView?, attribute: NSLayoutAttribute?) {
-        self.view = view
-        self.attribute = attribute
-    }
+}
+
+/// The SNPConstraintProducing protocol provides a common interface for types
+/// that are capable of producing constraints from standard expressions.
+public protocol SNPConstraintProducing {
     
-    // /////////////////////////////////////////////////////////////////////////
+    /// The supported type of a constant factor in the expression.
+    typealias ConstantType
     
     /// Produces the layout constraints using the given expression.
-    ///
-    /// You must override this method in your subclass. Do not call super.
     ///
     /// :param: relation The relation between two sides of an equation.
     /// :param: expression The expression to be used to construct a constraint.
     ///
     /// :returns: An array of installable layout constraints.
-    public func createConstraints(#relation: NSLayoutRelation, expression: SNPExpression<T>) -> [SNPConstraint] {
-        fatalError("Cannot create constraints in an attribute abstract class.")
-    }
+    func produceConstraints <A where A.ConstantType == ConstantType> (#relation: NSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint]
+    
+}
+
+/// The SNPConstraintProducing protocol provides a common interface for types
+/// that are capable of producing constraints from anonymous expressions.
+public protocol SNPAnonymousConstraintProducing {
+    
+    /// The supported type of a constant factor in the expression.
+    typealias ConstantType
+    
+    /// Produces the layout constraints using the given anonymous expression.
+    ///
+    /// :param: relation The relation between two sides of an equation.
+    /// :param: expression The expression to be used to construct a constraint.
+    ///
+    /// :returns: An array of installable layout constraints.
+    func produceConstraints(#relation: NSLayoutRelation, expression: SNPAnonymousExpression<ConstantType>) -> [SNPConstraint]
     
 }
