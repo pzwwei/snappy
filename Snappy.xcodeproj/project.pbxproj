@@ -12,16 +12,15 @@
 		3A40DD9419A7B8B000B4C01A /* Snappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A55A19969D390090D467 /* Snappy.framework */; };
 		3A4B1E1719AFE8090054843A /* SNPExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B1E1619AFE8090054843A /* SNPExpression.swift */; };
 		3A4B1E1F19AFEFB50054843A /* SNPAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B1E1E19AFEFB50054843A /* SNPAttribute.swift */; };
-		3A4B1E2119AFF4780054843A /* SNPOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B1E2019AFF4780054843A /* SNPOperators.swift */; };
 		3A4B1E2319AFF62E0054843A /* SNPConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B1E2219AFF62E0054843A /* SNPConstraint.swift */; };
 		3A5BEDAE19A7C04100695BC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A5AA1996ADBF0090D467 /* UIKit.framework */; };
 		3A90A5AB1996ADBF0090D467 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90A5AA1996ADBF0090D467 /* UIKit.framework */; };
-		3AFA045419B0A10E0079B0DB /* SNPEdgeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA045319B0A10E0079B0DB /* SNPEdgeAttribute.swift */; };
-		3AFA045619B0A5760079B0DB /* SNPPositionAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA045519B0A5760079B0DB /* SNPPositionAttribute.swift */; };
 		3AFA045A19B0AB670079B0DB /* SNPViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA045819B0AB670079B0DB /* SNPViewAdditions.swift */; };
 		3AFA045B19B0AB670079B0DB /* SNPViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA045919B0AB670079B0DB /* SNPViewProxy.swift */; };
 		3AFA045E19B0AB950079B0DB /* SNPOperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA045C19B0AB6F0079B0DB /* SNPOperatorsSpec.swift */; };
 		3AFA046919B0B09F0079B0DB /* SNPSystemTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA046819B0B09F0079B0DB /* SNPSystemTypes.swift */; };
+		3AFA047319B0C45D0079B0DB /* SNPStandardAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA047219B0C45D0079B0DB /* SNPStandardAttribute.swift */; };
+		3AFA047419B0CEB50079B0DB /* SNPOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B1E2019AFF4780054843A /* SNPOperators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,12 +133,11 @@
 		3A90A58A19969D8C0090D467 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3A90A59E19969E940090D467 /* Framework-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
 		3A90A5AA1996ADBF0090D467 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		3AFA045319B0A10E0079B0DB /* SNPEdgeAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPEdgeAttribute.swift; sourceTree = "<group>"; };
-		3AFA045519B0A5760079B0DB /* SNPPositionAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPPositionAttribute.swift; sourceTree = "<group>"; };
 		3AFA045819B0AB670079B0DB /* SNPViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPViewAdditions.swift; sourceTree = "<group>"; };
 		3AFA045919B0AB670079B0DB /* SNPViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPViewProxy.swift; sourceTree = "<group>"; };
 		3AFA045C19B0AB6F0079B0DB /* SNPOperatorsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPOperatorsSpec.swift; sourceTree = "<group>"; };
 		3AFA046819B0B09F0079B0DB /* SNPSystemTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPSystemTypes.swift; sourceTree = "<group>"; };
+		3AFA047219B0C45D0079B0DB /* SNPStandardAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPStandardAttribute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,8 +335,7 @@
 		3AFA044C19B0A0F90079B0DB /* Attribute Types */ = {
 			isa = PBXGroup;
 			children = (
-				3AFA045319B0A10E0079B0DB /* SNPEdgeAttribute.swift */,
-				3AFA045519B0A5760079B0DB /* SNPPositionAttribute.swift */,
+				3AFA047219B0C45D0079B0DB /* SNPStandardAttribute.swift */,
 			);
 			name = "Attribute Types";
 			sourceTree = "<group>";
@@ -556,13 +553,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AFA045419B0A10E0079B0DB /* SNPEdgeAttribute.swift in Sources */,
 				3A4B1E2319AFF62E0054843A /* SNPConstraint.swift in Sources */,
 				3AFA046919B0B09F0079B0DB /* SNPSystemTypes.swift in Sources */,
 				3AFA045A19B0AB670079B0DB /* SNPViewAdditions.swift in Sources */,
 				3AFA045B19B0AB670079B0DB /* SNPViewProxy.swift in Sources */,
-				3A4B1E2119AFF4780054843A /* SNPOperators.swift in Sources */,
-				3AFA045619B0A5760079B0DB /* SNPPositionAttribute.swift in Sources */,
+				3AFA047319B0C45D0079B0DB /* SNPStandardAttribute.swift in Sources */,
+				3AFA047419B0CEB50079B0DB /* SNPOperators.swift in Sources */,
 				3A4B1E1F19AFEFB50054843A /* SNPAttribute.swift in Sources */,
 				3A4B1E1719AFE8090054843A /* SNPExpression.swift in Sources */,
 			);
