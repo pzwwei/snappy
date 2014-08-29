@@ -6,19 +6,17 @@
 //  Licensed under the MIT License.
 //
 
-import UIKit
-
 /// SNPViewProxy is a wrapper around UIView, providing easy and safe access to
 /// the layout attributes of a proxied view.
 public class SNPViewProxy {
     
     /// The proxied view.
-    public let view: UIView
+    public let view: SNPOSView
     
     /// Creates and returns an initialized view proxy.
     ///
     /// :param: view The view to be proxied.
-    public init(view: UIView) {
+    public init(view: SNPOSView) {
         self.view = view
     }
     
@@ -26,86 +24,117 @@ public class SNPViewProxy {
 
 // /////////////////////////////////////////////////////////////////////////////
 
-public extension SNPViewProxy {
+public extension SNPOSView {
     
-    /// Top edge layout attribute.
-    var top: SNPEdgeAttribute<Double> {
-        return SNPEdgeAttribute<Double>(view: self.view, attribute: .Top)
+    /// Returns a view proxy of itself.
+    public var snp: SNPViewProxy {
+        return SNPViewProxy(view: self)
     }
-    
-    /// Bottom edge layout attribute.
-    var bottom: SNPEdgeAttribute<Double> {
-        return SNPEdgeAttribute<Double>(view: self.view, attribute: .Bottom)
-    }
-    
-    /// Left edge layout attribute.
-    public var left: SNPEdgeAttribute<Double> {
-        return SNPEdgeAttribute<Double>(view: self.view, attribute: .Left)
-    }
-    
-    /// Right edge layout attribute.
-    public var right: SNPEdgeAttribute<Double> {
-        return SNPEdgeAttribute<Double>(view: self.view, attribute: .Right)
-    }
-    
-    /// Leading edge layout attribute.
-    public var leading: SNPEdgeAttribute<Double> {
-        return SNPEdgeAttribute<Double>(view: self.view, attribute: .Leading)
-    }
-    
-    /// Trailing edge layout attribute.
-    public var trailing: SNPEdgeAttribute<Double> {
-        return SNPEdgeAttribute<Double>(view: self.view, attribute: .Trailing)
-    }
-    
-    // /////////////////////////////////////////////////////////////////////////
-    
-    /// Baseline layout attribute.
-    public var baseline: SNPDoubleAttribute<Double> {
-        return SNPDoubleAttribute<Double>(view: self.view, attribute: .Baseline)
-    }
-    
-    // /////////////////////////////////////////////////////////////////////////
-    
-    /// Width layout attribute.
-    public var width: SNPDoubleAttribute<Double> {
-        return SNPDoubleAttribute<Double>(view: self.view, attribute: .Width)
-    }
-    
-    /// Height layout attribute.
-    public var height: SNPDoubleAttribute<Double> {
-        return SNPDoubleAttribute<Double>(view: self.view, attribute: .Height)
-    }
-    
-    // /////////////////////////////////////////////////////////////////////////
-    
-    /// X-coordinate center layout attribute.
-    public var centerX: SNPPositionAttribute<Double> {
-        return SNPPositionAttribute<Double>(view: self.view, attribute: .CenterX)
-    }
-    
-    /// Y-coordinate center layout attribute.
-    public var centerY: SNPPositionAttribute<Double> {
-        return SNPPositionAttribute<Double>(view: self.view, attribute: .CenterY)
-    }
-    
-    // /////////////////////////////////////////////////////////////////////////
-    
-    /// Convienience edge insets layout attributes.
-    public var edges: SNPInsetsAttribute<UIEdgeInsets> {
-        return SNPInsetsAttribute<UIEdgeInsets>(view: self.view, attribute: nil)
-    }
-
     
 }
 
 // /////////////////////////////////////////////////////////////////////////////
 
-public extension UIView {
-    
-    /// Returns a proxy of itself.
-    public var snp: SNPViewProxy {
-        return SNPViewProxy(view: self)
+public extension SNPViewProxy {
+
+    /// Supported source layout attributes for vertical edges.
+    private var supportedVerticalEdgeAttributes: [SNPOSLayoutAttribute] {
+        return [.Top, .Bottom, .Baseline, .CenterY, .TopMargin, .BottomMargin]
+    }
+
+    /// Supported source layout attributes for horizontal edges.
+    private var supportedHorizontalEdgeAttributes: [SNPOSLayoutAttribute] {
+        return [.Left, .Right, .Leading, .Trailing, .CenterX, .LeftMargin, .RightMargin, .LeadingMargin, .TrailingMargin]
     }
     
+    /// Top edge layout attribute.
+    public var top: SNPStandardAttribute {
+        var attr = SNPStandardAttribute(view: self.view, attribute: .Top)
+        attr.supportedSourceAttributes = self.supportedVerticalEdgeAttributes
+        attr.anonymousAttribute = .Top
+        return attr
+    }
+
+    /// Bottom edge layout attribute.
+    public var bottom: SNPStandardAttribute {
+        var attr = SNPStandardAttribute(view: self.view, attribute: .Bottom)
+        attr.supportedSourceAttributes = self.supportedVerticalEdgeAttributes
+        attr.anonymousAttribute = .Bottom
+        return attr
+    }
+    
+    /// Left edge layout attribute.
+    public var left: SNPStandardAttribute {
+        var attr = SNPStandardAttribute(view: self.view, attribute: .Left)
+        attr.supportedSourceAttributes = self.supportedHorizontalEdgeAttributes
+        attr.anonymousAttribute = .Left
+        return attr
+    }
+    
+    /// Right edge layout attribute.
+    public var right: SNPStandardAttribute {
+        var attr = SNPStandardAttribute(view: self.view, attribute: .Right)
+        attr.supportedSourceAttributes = self.supportedHorizontalEdgeAttributes
+        attr.anonymousAttribute = .Right
+        return attr
+    }
+    
+    /// Leading edge layout attribute.
+    public var leading: SNPStandardAttribute {
+        var attr = SNPStandardAttribute(view: self.view, attribute: .Leading)
+        attr.supportedSourceAttributes = self.supportedHorizontalEdgeAttributes
+        attr.anonymousAttribute = .Leading
+        return attr
+    }
+    
+    /// Trailing edge layout attribute.
+    public var trailing: SNPStandardAttribute {
+        var attr = SNPStandardAttribute(view: self.view, attribute: .Trailing)
+        attr.supportedSourceAttributes = self.supportedHorizontalEdgeAttributes
+        attr.anonymousAttribute = .Trailing
+        return attr
+    }
+    
+    /// Baseline layout attribute.
+    public var baseline: SNPStandardAttribute {
+        var attr = SNPStandardAttribute(view: self.view, attribute: .Baseline)
+        attr.supportedSourceAttributes = self.supportedVerticalEdgeAttributes
+        attr.anonymousAttribute = .Baseline
+        return attr
+    }
+    
+    // /////////////////////////////////////////////////////////////////////////
+    
+    /// X-axis center layout attribute.
+    public var centerX: SNPStandardAttribute {
+        var attr = SNPStandardAttribute(view: self.view, attribute: .CenterX)
+        attr.supportedSourceAttributes = self.supportedHorizontalEdgeAttributes
+        attr.anonymousAttribute = .Left
+        return attr
+    }
+    
+    /// Y-axis center layout attribute.
+    public var centerY: SNPStandardAttribute {
+        var attr = SNPStandardAttribute(view: self.view, attribute: .CenterY)
+        attr.supportedSourceAttributes = self.supportedVerticalEdgeAttributes
+        attr.anonymousAttribute = .Top
+        return attr
+    }
+    
+    // /////////////////////////////////////////////////////////////////////////
+    
+    /// Width layout attibute.
+    public var width: SNPStandardAttribute {
+        var attr = SNPStandardAttribute(view: self.view, attribute: .Width)
+        attr.supportedSourceAttributes = [.Width, .Height]
+        return attr
+    }
+    
+    /// Height layout attibute.
+    public var height: SNPStandardAttribute {
+        var attr = SNPStandardAttribute(view: self.view, attribute: .Height)
+        attr.supportedSourceAttributes = [.Width, .Height]
+        return attr
+    }
+
 }
