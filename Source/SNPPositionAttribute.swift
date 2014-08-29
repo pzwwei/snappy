@@ -6,8 +6,6 @@
 //  Licensed under the MIT License.
 //
 
-import UIKit
-
 /// The SNPPositionAttribute structure is used to describe "position" layout
 /// attributes, such as x-center and y-center.
 public struct SNPPositionAttribute: SNPAttributeType, SNPConstraintProducing, SNPAnonymousConstraintProducing {
@@ -16,7 +14,7 @@ public struct SNPPositionAttribute: SNPAttributeType, SNPConstraintProducing, SN
     ///
     /// :param: view The associated view.
     /// :param: attribute The represented layout attribute.
-    init(view: UIView, attribute: NSLayoutAttribute) {
+    init(view: SNPOSView, attribute: SNPOSLayoutAttribute) {
         self.view = view
         self.attribute = attribute
     }
@@ -24,7 +22,7 @@ public struct SNPPositionAttribute: SNPAttributeType, SNPConstraintProducing, SN
     // /////////////////////////////////////////////////////////////////////////
     
     /// An array of supported attributes.
-    private static var supportedAttributes: [NSLayoutAttribute] {
+    private static var supportedAttributes: [SNPOSLayoutAttribute] {
         return [.CenterX, .CenterY]
     }
     
@@ -37,12 +35,12 @@ public struct SNPPositionAttribute: SNPAttributeType, SNPConstraintProducing, SN
     public let view: UIView
     
     /// See SNPAttributeType.
-    public let attribute: NSLayoutAttribute
+    public let attribute: SNPOSLayoutAttribute
     
     // /////////////////////////////////////////////////////////////////////////
     
     /// See SNPConstraintProducing.
-    public func produceConstraints <A where A.ConstantType == ConstantType> (#relation: NSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint] {
+    public func produceConstraints <A where A.ConstantType == ConstantType> (#relation: SNPOSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint] {
         assert(contains(self.dynamicType.supportedAttributes, self.attribute), "Cannot produce constraints: unsupported destination layout attribute.")
         assert(contains(self.dynamicType.supportedAttributes, expression.attribute.attribute), "Cannot produce constraints: unsupported source layout attribute.")
         return [SNPConstraint(
@@ -56,7 +54,7 @@ public struct SNPPositionAttribute: SNPAttributeType, SNPConstraintProducing, SN
     }
     
     /// See SNPAnonymousConstraintProducing.
-    public func produceConstraints(#relation: NSLayoutRelation, expression: SNPAnonymousExpression<ConstantType>) -> [SNPConstraint] {
+    public func produceConstraints(#relation: SNPOSLayoutRelation, expression: SNPAnonymousExpression<ConstantType>) -> [SNPConstraint] {
         assert(contains(self.dynamicType.supportedAttributes, self.attribute), "Cannot produce constraints: unsupported destination layout attribute.")
         assert(self.view.superview != nil, "Cannot produce constraints: destination view has no superview.")
         return [SNPConstraint(

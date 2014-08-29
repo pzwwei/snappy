@@ -6,22 +6,20 @@
 //  Licensed under the MIT License.
 //
 
-import UIKit
-
 /// An operator that assigns the priority to an expression.
 infix operator ~ { associativity left precedence 135 }
 
 // /////////////////////////////////////////////////////////////////////////////
 
 private func produceAndInstallConstraints <P: SNPConstraintProducing, A: SNPAttributeType where P.ConstantType == A.ConstantType>
-  (producer: P, relation: NSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint] {
+  (producer: P, relation: SNPOSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint] {
     let consts = producer.produceConstraints(relation: relation, expression: expression)
     for const in consts { const.install() }
     return consts
 }
 
 private func produceAndInstallConstraints <P: SNPAnonymousConstraintProducing>
-  (producer: P, relation: NSLayoutRelation, expression: SNPAnonymousExpression<P.ConstantType>) -> [SNPConstraint] {
+  (producer: P, relation: SNPOSLayoutRelation, expression: SNPAnonymousExpression<P.ConstantType>) -> [SNPConstraint] {
     let consts = producer.produceConstraints(relation: relation, expression: expression)
     for const in consts { const.install() }
     return consts
@@ -119,17 +117,17 @@ public func - <L: SNPAttributeType> (lhs: L, rhs: L.ConstantType) -> SNPExpressi
 
 // /////////////////////////////////////////////////////////////////////////////
 
-public func ~ <L: SNPAttributeType> (lhs: SNPExpression<L>, rhs: UILayoutPriority) -> SNPExpression<L> {
+public func ~ <L: SNPAttributeType> (lhs: SNPExpression<L>, rhs: SNPOSLayoutPriority) -> SNPExpression<L> {
     var expr = lhs
     expr.priority = rhs
     return expr
 }
 
-public func ~ <L: SNPAttributeType> (lhs: L, rhs: UILayoutPriority) -> SNPExpression<L> {
+public func ~ <L: SNPAttributeType> (lhs: L, rhs: SNPOSLayoutPriority) -> SNPExpression<L> {
     return SNPExpression(attribute: lhs) ~ rhs
 }
 
-public func ~ <L> (lhs: L, rhs: UILayoutPriority) -> SNPAnonymousExpression<L> {
+public func ~ <L> (lhs: L, rhs: SNPOSLayoutPriority) -> SNPAnonymousExpression<L> {
     var expr = SNPAnonymousExpression(constantValue: lhs)
     expr.priority = rhs
     return expr

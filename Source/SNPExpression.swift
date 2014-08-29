@@ -6,8 +6,6 @@
 //  Licensed under the MIT License.
 //
 
-import UIKit
-
 /// The SNPExpression structure is used to describe the right-hand side of a
 /// constraint equation. It contains information about the source attribute,
 /// constant and multiplication factors, as well as constraint's priority.
@@ -28,7 +26,7 @@ public struct SNPExpression <A: SNPAttributeType> {
     public var multiplicationValue: Double = 1
     
     /// The priority of the constraint.
-    public var priority: UILayoutPriority = 1000
+    public var priority: SNPOSLayoutPriority = 1000
     
     // /////////////////////////////////////////////////////////////////////////
     
@@ -53,7 +51,7 @@ public struct SNPAnonymousExpression <C> {
     public let constantValue: C
     
     /// The priority of the constraint.
-    public var priority: UILayoutPriority = 1000
+    public var priority: SNPOSLayoutPriority = 1000
     
     // /////////////////////////////////////////////////////////////////////////
     

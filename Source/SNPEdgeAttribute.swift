@@ -6,8 +6,6 @@
 //  Licensed under the MIT License.
 //
 
-import UIKit
-
 /// The SNPEdgeAttribute structure is used to describe "edge" layout attributes,
 /// such as top, bottom, left and right.
 public struct SNPEdgeAttribute: SNPAttributeType, SNPConstraintProducing, SNPAnonymousConstraintProducing {
@@ -16,7 +14,7 @@ public struct SNPEdgeAttribute: SNPAttributeType, SNPConstraintProducing, SNPAno
     ///
     /// :param: view The associated view.
     /// :param: attribute The represented layout attribute.
-    init(view: UIView, attribute: NSLayoutAttribute) {
+    init(view: SNPOSView, attribute: SNPOSLayoutAttribute) {
         self.view = view
         self.attribute = attribute
     }
@@ -24,7 +22,7 @@ public struct SNPEdgeAttribute: SNPAttributeType, SNPConstraintProducing, SNPAno
     // /////////////////////////////////////////////////////////////////////////
     
     /// An array of supported attributes.
-    private static var supportedAttributes: [NSLayoutAttribute] {
+    private static var supportedAttributes: [SNPOSLayoutAttribute] {
         return [.Top, .Bottom, .Left, .Right, .Leading, .Trailing]
     }
     
@@ -34,15 +32,15 @@ public struct SNPEdgeAttribute: SNPAttributeType, SNPConstraintProducing, SNPAno
     public typealias ConstantType = Double
     
     /// See SNPAttributeType.
-    public let view: UIView
+    public let view: SNPOSView
     
     /// See SNPAttributeType.
-    public let attribute: NSLayoutAttribute
+    public let attribute: SNPOSLayoutAttribute
 
     // /////////////////////////////////////////////////////////////////////////
 
     /// See SNPConstraintProducing.
-    public func produceConstraints <A where A.ConstantType == ConstantType> (#relation: NSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint] {
+    public func produceConstraints <A where A.ConstantType == ConstantType> (#relation: SNPOSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint] {
         assert(contains(self.dynamicType.supportedAttributes, self.attribute), "Cannot produce constraints: unsupported destination layout attribute.")
         assert(contains(self.dynamicType.supportedAttributes, expression.attribute.attribute), "Cannot produce constraints: unsupported source layout attribute.")
         return [SNPConstraint(
@@ -56,7 +54,7 @@ public struct SNPEdgeAttribute: SNPAttributeType, SNPConstraintProducing, SNPAno
     }
     
     /// See SNPAnonymousConstraintProducing.
-    public func produceConstraints(#relation: NSLayoutRelation, expression: SNPAnonymousExpression<ConstantType>) -> [SNPConstraint] {
+    public func produceConstraints(#relation: SNPOSLayoutRelation, expression: SNPAnonymousExpression<ConstantType>) -> [SNPConstraint] {
         assert(contains(self.dynamicType.supportedAttributes, self.attribute), "Cannot produce constraints: unsupported destination layout attribute.")
         assert(self.view.superview != nil, "Cannot produce constraints: destination view has no superview.")
         return [SNPConstraint(

@@ -6,8 +6,6 @@
 //  Licensed under the MIT License.
 //
 
-import UIKit
-
 /// The SNPAttributeType protocol provides a common interface for types that
 /// represent a layout attribute of a view.
 public protocol SNPAttributeType {
@@ -16,11 +14,11 @@ public protocol SNPAttributeType {
     typealias ConstantType
     
     /// A view associated with an attribute.
-    var view: UIView { get }
+    var view: SNPOSView { get }
     
     /// A foundation layout attribute. This property can be nil only when using
     /// with custom attributes, otherwise a fatal error may occur.
-    var attribute: NSLayoutAttribute { get }
+    var attribute: SNPOSLayoutAttribute { get }
     
 }
 
@@ -37,7 +35,7 @@ public protocol SNPConstraintProducing {
     /// :param: expression The expression to be used to construct a constraint.
     ///
     /// :returns: An array of installable layout constraints.
-    func produceConstraints <A where A.ConstantType == ConstantType> (#relation: NSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint]
+    func produceConstraints <A where A.ConstantType == ConstantType> (#relation: SNPOSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint]
     
 }
 
@@ -54,6 +52,6 @@ public protocol SNPAnonymousConstraintProducing {
     /// :param: expression The expression to be used to construct a constraint.
     ///
     /// :returns: An array of installable layout constraints.
-    func produceConstraints(#relation: NSLayoutRelation, expression: SNPAnonymousExpression<ConstantType>) -> [SNPConstraint]
+    func produceConstraints(#relation: SNPOSLayoutRelation, expression: SNPAnonymousExpression<ConstantType>) -> [SNPConstraint]
     
 }

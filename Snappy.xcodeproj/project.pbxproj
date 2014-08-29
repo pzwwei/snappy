@@ -21,6 +21,7 @@
 		3AFA045A19B0AB670079B0DB /* SNPViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA045819B0AB670079B0DB /* SNPViewAdditions.swift */; };
 		3AFA045B19B0AB670079B0DB /* SNPViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA045919B0AB670079B0DB /* SNPViewProxy.swift */; };
 		3AFA045E19B0AB950079B0DB /* SNPOperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA045C19B0AB6F0079B0DB /* SNPOperatorsSpec.swift */; };
+		3AFA046919B0B09F0079B0DB /* SNPSystemTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA046819B0B09F0079B0DB /* SNPSystemTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,7 @@
 		3AFA045819B0AB670079B0DB /* SNPViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPViewAdditions.swift; sourceTree = "<group>"; };
 		3AFA045919B0AB670079B0DB /* SNPViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPViewProxy.swift; sourceTree = "<group>"; };
 		3AFA045C19B0AB6F0079B0DB /* SNPOperatorsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPOperatorsSpec.swift; sourceTree = "<group>"; };
+		3AFA046819B0B09F0079B0DB /* SNPSystemTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPSystemTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4B1E2019AFF4780054843A /* SNPOperators.swift */,
+				3AFA046819B0B09F0079B0DB /* SNPSystemTypes.swift */,
 			);
 			name = "Language Support";
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 			files = (
 				3AFA045419B0A10E0079B0DB /* SNPEdgeAttribute.swift in Sources */,
 				3A4B1E2319AFF62E0054843A /* SNPConstraint.swift in Sources */,
+				3AFA046919B0B09F0079B0DB /* SNPSystemTypes.swift in Sources */,
 				3AFA045A19B0AB670079B0DB /* SNPViewAdditions.swift in Sources */,
 				3AFA045B19B0AB670079B0DB /* SNPViewProxy.swift in Sources */,
 				3A4B1E2119AFF4780054843A /* SNPOperators.swift in Sources */,
