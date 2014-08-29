@@ -3,7 +3,7 @@
 //
 //  Copyright (c) 2014 Adrian Kashivskyy. All rights reserved.
 //
-//  Licensed under the MIT License.=
+//  Licensed under the MIT License.
 //
 
 import UIKit
@@ -13,52 +13,79 @@ infix operator ~ { associativity left precedence 135 }
 
 // /////////////////////////////////////////////////////////////////////////////
 
-public func == <L: SNPAttributeType> (lhs: L, rhs: SNPExpression<L>) -> [SNPConstraint] {
-    let consts = lhs.produceConstraints(relation: .Equal, expression: rhs)
+private func produceAndInstallConstraints <P: SNPConstraintProducing, A: SNPAttributeType where P.ConstantType == A.ConstantType>
+  (producer: P, relation: NSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint] {
+    let consts = producer.produceConstraints(relation: relation, expression: expression)
     for const in consts { const.install() }
     return consts
 }
 
-public func == <L: SNPAttributeType> (lhs: L, rhs: L) -> [SNPConstraint] {
-    let expr = SNPExpression<L>()
-    expr.attribute = rhs
-    return lhs == expr
+private func produceAndInstallConstraints <P: SNPAnonymousConstraintProducing>
+  (producer: P, relation: NSLayoutRelation, expression: SNPAnonymousExpression<P.ConstantType>) -> [SNPConstraint] {
+    let consts = producer.produceConstraints(relation: relation, expression: expression)
+    for const in consts { const.install() }
+    return consts
 }
 
 // /////////////////////////////////////////////////////////////////////////////
 
-public func >= <L: SNPAttributeType> (lhs: L, rhs: SNPExpression<L>) -> [SNPConstraint] {
-    let consts = lhs.produceConstraints(relation: .GreaterThanOrEqual, expression: rhs)
-    for const in consts { const.install() }
-    return consts
+public func == <L: SNPConstraintProducing, R: SNPAttributeType where L.ConstantType == R.ConstantType> (lhs: L, rhs: SNPExpression<R>) -> [SNPConstraint] {
+    return produceAndInstallConstraints(lhs, .Equal, rhs)
 }
 
-public func >= <L: SNPAttributeType> (lhs: L, rhs: L) -> [SNPConstraint] {
-    let expr = SNPExpression<L>()
-    expr.attribute = rhs
-    return lhs >= expr
+public func == <L: SNPConstraintProducing, R: SNPAttributeType where L.ConstantType == R.ConstantType> (lhs: L, rhs: R) -> [SNPConstraint] {
+    return lhs == SNPExpression(attribute: rhs)
+}
+
+public func == <L: SNPAnonymousConstraintProducing> (lhs: L, rhs: SNPAnonymousExpression<L.ConstantType>) -> [SNPConstraint] {
+    return produceAndInstallConstraints(lhs, .Equal, rhs)
+}
+
+public func == <L: SNPAnonymousConstraintProducing> (lhs: L, rhs: L.ConstantType) -> [SNPConstraint] {
+    return lhs == SNPAnonymousExpression(constantValue: rhs)
 }
 
 // /////////////////////////////////////////////////////////////////////////////
 
-public func <= <L: SNPAttributeType> (lhs: L, rhs: SNPExpression<L>) -> [SNPConstraint] {
-    let consts = lhs.produceConstraints(relation: .LessThanOrEqual, expression: rhs)
-    for const in consts { const.install() }
-    return consts
+public func >= <L: SNPConstraintProducing, R: SNPAttributeType where L.ConstantType == R.ConstantType> (lhs: L, rhs: SNPExpression<R>) -> [SNPConstraint] {
+    return produceAndInstallConstraints(lhs, .GreaterThanOrEqual, rhs)
 }
 
-public func <= <L: SNPAttributeType> (lhs: L, rhs: L) -> [SNPConstraint] {
-    let expr = SNPExpression<L>()
-    expr.attribute = rhs
-    return lhs <= expr
+public func >= <L: SNPConstraintProducing, R: SNPAttributeType where L.ConstantType == R.ConstantType> (lhs: L, rhs: R) -> [SNPConstraint] {
+    return lhs >= SNPExpression(attribute: rhs)
+}
+
+public func >= <L: SNPAnonymousConstraintProducing> (lhs: L, rhs: SNPAnonymousExpression<L.ConstantType>) -> [SNPConstraint] {
+    return produceAndInstallConstraints(lhs, .GreaterThanOrEqual, rhs)
+}
+
+public func >= <L: SNPAnonymousConstraintProducing> (lhs: L, rhs: L.ConstantType) -> [SNPConstraint] {
+    return lhs >= SNPAnonymousExpression(constantValue: rhs)
+}
+
+// /////////////////////////////////////////////////////////////////////////////
+
+public func <= <L: SNPConstraintProducing, R: SNPAttributeType where L.ConstantType == R.ConstantType> (lhs: L, rhs: SNPExpression<R>) -> [SNPConstraint] {
+    return produceAndInstallConstraints(lhs, .LessThanOrEqual, rhs)
+}
+
+public func <= <L: SNPConstraintProducing, R: SNPAttributeType where L.ConstantType == R.ConstantType> (lhs: L, rhs: R) -> [SNPConstraint] {
+    return lhs <= SNPExpression(attribute: rhs)
+}
+
+public func <= <L: SNPAnonymousConstraintProducing> (lhs: L, rhs: SNPAnonymousExpression<L.ConstantType>) -> [SNPConstraint] {
+    return produceAndInstallConstraints(lhs, .LessThanOrEqual, rhs)
+}
+
+public func <= <L: SNPAnonymousConstraintProducing> (lhs: L, rhs: L.ConstantType) -> [SNPConstraint] {
+    return lhs <= SNPAnonymousExpression(constantValue: rhs)
 }
 
 // /////////////////////////////////////////////////////////////////////////////
 
 public func * <L: SNPAttributeType> (lhs: L, rhs: Double) -> SNPExpression<L> {
-    let expr = SNPExpression<L>()
-    expr.attribute = lhs
-    expr.multiplier = rhs
+    var expr = SNPExpression(attribute: lhs)
+    expr.multiplicationValue = rhs
     return expr
 }
 
@@ -68,39 +95,42 @@ public func / <L: SNPAttributeType> (lhs: L, rhs: Double) -> SNPExpression<L> {
 
 // /////////////////////////////////////////////////////////////////////////////
 
-public func + <L: SNPAttributeType, R where R == L.ConstantType> (lhs: SNPExpression<L>, rhs: R) -> SNPExpression<L> {
-    lhs.constantIsPositive = true
-    lhs.constantValue = rhs
-    return lhs
+public func + <L: SNPAttributeType> (lhs: SNPExpression<L>, rhs: L.ConstantType) -> SNPExpression<L> {
+    var expr = lhs
+    expr.constantPositive = true
+    expr.constantValue = rhs
+    return expr
 }
 
-public func + <L: SNPAttributeType, R where R == L.ConstantType> (lhs: L, rhs: R) -> SNPExpression<L> {
-    let expr = SNPExpression<L>()
-    expr.attribute = lhs
-    return expr + rhs
+public func + <L: SNPAttributeType> (lhs: L, rhs: L.ConstantType) -> SNPExpression<L> {
+    return SNPExpression(attribute: lhs) + rhs
 }
 
-public func - <L: SNPAttributeType, R where R == L.ConstantType> (lhs: SNPExpression<L>, rhs: R) -> SNPExpression<L> {
-    lhs.constantIsPositive = false
-    lhs.constantValue = rhs
-    return lhs
+public func - <L: SNPAttributeType> (lhs: SNPExpression<L>, rhs: L.ConstantType) -> SNPExpression<L> {
+    var expr = lhs
+    expr.constantPositive = false
+    expr.constantValue = rhs
+    return expr
 }
 
-public func - <L: SNPAttributeType, R where R == L.ConstantType> (lhs: L, rhs: R) -> SNPExpression<L> {
-    let expr = SNPExpression<L>()
-    expr.attribute = lhs
-    return expr - rhs
+public func - <L: SNPAttributeType> (lhs: L, rhs: L.ConstantType) -> SNPExpression<L> {
+    return SNPExpression(attribute: lhs) - rhs
 }
 
 // /////////////////////////////////////////////////////////////////////////////
 
 public func ~ <L: SNPAttributeType> (lhs: SNPExpression<L>, rhs: UILayoutPriority) -> SNPExpression<L> {
-    lhs.priority = rhs
-    return lhs
+    var expr = lhs
+    expr.priority = rhs
+    return expr
 }
 
 public func ~ <L: SNPAttributeType> (lhs: L, rhs: UILayoutPriority) -> SNPExpression<L> {
-    let expr = SNPExpression<L>()
-    expr.attribute = lhs
-    return expr ~ rhs
+    return SNPExpression(attribute: lhs) ~ rhs
+}
+
+public func ~ <L> (lhs: L, rhs: UILayoutPriority) -> SNPAnonymousExpression<L> {
+    var expr = SNPAnonymousExpression(constantValue: lhs)
+    expr.priority = rhs
+    return expr
 }
