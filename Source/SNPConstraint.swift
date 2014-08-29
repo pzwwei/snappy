@@ -1,9 +1,9 @@
 //
 //  SNPConstraint.swift
-//  Snappy
 //
-//  Created by Adrian on 29.08.2014.
 //  Copyright (c) 2014 Adrian Kashivskyy. All rights reserved.
+//
+//  Licensed under the MIT License.
 //
 
 import UIKit
