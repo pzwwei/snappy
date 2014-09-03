@@ -6,14 +6,12 @@
 //  Licensed under the MIT License.
 //
 
-// FIXME: Wait until first stable for rdar://18176436 to be fixed.
-
 /// The SNPExpression structure is used to describe the right-hand side of a
 /// constraint equation. It contains information about the source attribute,
 /// constant and multiplication factors, as well as constraint's priority.
 ///
 /// :param: A The type of layout attribute referenced in the expression.
-public struct SNPExpression <A: SNPAttributeType> {
+public struct SNPExpression <A: SNPAttributeType, C where C == A.ConstantType> {
     
     /// The source attribute referenced in the expression.
     public let attribute: A
@@ -22,7 +20,7 @@ public struct SNPExpression <A: SNPAttributeType> {
     public var constantPositive: Bool?
 
     /// The constant factor in the expression.
-    public var constantValue: A.ConstantType?
+    public var constantValue: C?
     
     /// The multiplication factor in the expression.
     public var multiplicationValue: Double = 1

@@ -38,7 +38,7 @@ public struct SNPStandardAttribute: SNPAttributeType, SNPConstraintProducing, SN
     // /////////////////////////////////////////////////////////////////////////
     
     /// See SNPConstraintProducing.
-    public func produceConstraints <A where A.ConstantType == ConstantType> (#relation: SNPOSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint] {
+    public func produceConstraints <A where A.ConstantType == ConstantType> (#relation: SNPOSLayoutRelation, expression: SNPExpression<A, ConstantType>) -> [SNPConstraint] {
         assert(contains(self.supportedSourceAttributes, expression.attribute.attribute), "Cannot produce constraints: unsupported source attribute.")
         return [SNPConstraint(
             destination: (self.view, self.attribute),

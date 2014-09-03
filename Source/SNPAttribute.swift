@@ -35,7 +35,7 @@ public protocol SNPConstraintProducing {
     /// :param: expression The expression to be used to construct a constraint.
     ///
     /// :returns: An array of installable layout constraints.
-    func produceConstraints <A where A.ConstantType == ConstantType> (#relation: SNPOSLayoutRelation, expression: SNPExpression<A>) -> [SNPConstraint]
+    func produceConstraints <A where A.ConstantType == ConstantType> (#relation: SNPOSLayoutRelation, expression: SNPExpression<A, ConstantType>) -> [SNPConstraint]
     
 }
 
