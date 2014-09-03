@@ -6,9 +6,7 @@
 //  Licensed under the MIT License.
 //
 
-import UIKit
-
-public extension UIView {
+public extension SNPOSView {
     
     /// Prepares the receiver for constraint installation.
     public func snp_prepareForConstraintInstallation() {
@@ -17,13 +15,13 @@ public extension UIView {
     
     /// Returns the closest common superview with a given view.
     ///
-    /// :param: _view The view with which a common superview has to be found.
-    public func snp_closestCommonSuperviewWithView(view: UIView?) -> UIView? {
+    /// :param: view The view with which a common superview has to be found.
+    public func snp_closestCommonSuperviewWithView(view: SNPOSView?) -> SNPOSView? {
         if let view = view? {
             if self.isDescendantOfView(view) {
                 return view
             } else {
-                var superview: UIView? = self
+                var superview: SNPOSView? = self
                 while superview != nil {
                     if view.isDescendantOfView(superview!) {
                         return superview!
@@ -42,12 +40,12 @@ public extension UIView {
     /// Removes all constraints associated with the receiver, added up to the
     /// given view.
     ///
-    /// :param: upTo The maximal superview from which to remove constraints.
-    public func snp_removeAllConstraints(#upTo: UIView) {
-        var view: UIView? = self.superview
-        while view != nil && !view!.isDescendantOfView(upTo) {
-            for constraint in view!.constraints() as [NSLayoutConstraint] {
-                if constraint.firstItem as? UIView == self {
+    /// :param: upToView The maximal superview from which to remove constraints.
+    public func snp_removeAllConstraints(#upToView: SNPOSView) {
+        var view: SNPOSView? = self.superview
+        while view != nil && !view!.isDescendantOfView(upToView) {
+            for constraint in view!.constraints() as [SNPOSLayoutConstraint] {
+                if constraint.firstItem as? SNPOSView == self {
                     view!.removeConstraint(constraint)
                 }
             }
@@ -57,10 +55,10 @@ public extension UIView {
     
     /// Removes all constraints associated with the receiver.
     public func snp_removeAllConstraints() {
-        var view: UIView? = self.superview?
+        var view: SNPOSView? = self.superview?
         while view != nil {
-            for constraint in view!.constraints() as [NSLayoutConstraint] {
-                if constraint.firstItem as? UIView == self {
+            for constraint in view!.constraints() as [SNPOSLayoutConstraint] {
+                if constraint.firstItem as? SNPOSView == self {
                     view!.removeConstraint(constraint)
                 }
             }
